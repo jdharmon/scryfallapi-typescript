@@ -79,9 +79,9 @@ export interface CardFace {
    */
   manaCost?: string;
   /**
-   * @member {Colors} [colors] Possible values include: 'W', 'U', 'B', 'R', 'G'
+   * @member {Colors[]} [colors]
    */
-  colors?: Colors;
+  colors?: Colors[];
   /**
    * @member {Colors} [colorIndicator] Possible values include: 'W', 'U', 'B',
    * 'R', 'G'

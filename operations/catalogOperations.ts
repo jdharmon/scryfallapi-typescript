@@ -63,7 +63,7 @@ export class CatalogOperations {
         error.statusCode = response.status;
         error.request = msRest.stripRequest(httpRequest);
         error.response = msRest.stripResponse(response);
-        let parsedErrorResponse = operationRes.bodyAsJson as { [key: string]: any };
+        let parsedErrorResponse = operationRes.parsedBody as { [key: string]: any };
         try {
           if (parsedErrorResponse) {
             let internalError = null;
@@ -84,11 +84,11 @@ export class CatalogOperations {
       }
       // Deserialize Response
       if (statusCode === 200) {
-        let parsedResponse = operationRes.bodyAsJson as { [key: string]: any };
+        let parsedResponse = operationRes.parsedBody as { [key: string]: any };
         try {
           if (parsedResponse !== null && parsedResponse !== undefined) {
             let resultMapper = Mappers.Catalog;
-            operationRes.bodyAsJson = client.serializer.deserialize(resultMapper, parsedResponse, 'operationRes.bodyAsJson');
+            operationRes.parsedBody = client.serializer.deserialize(resultMapper, parsedResponse, 'operationRes.parsedBody');
           }
         } catch (error) {
           let deserializationError = new msRest.RestError(`Error ${error} occurred in deserializing the responseBody - ${operationRes.bodyAsText}`);
@@ -146,7 +146,7 @@ export class CatalogOperations {
         error.statusCode = response.status;
         error.request = msRest.stripRequest(httpRequest);
         error.response = msRest.stripResponse(response);
-        let parsedErrorResponse = operationRes.bodyAsJson as { [key: string]: any };
+        let parsedErrorResponse = operationRes.parsedBody as { [key: string]: any };
         try {
           if (parsedErrorResponse) {
             let internalError = null;
@@ -167,11 +167,11 @@ export class CatalogOperations {
       }
       // Deserialize Response
       if (statusCode === 200) {
-        let parsedResponse = operationRes.bodyAsJson as { [key: string]: any };
+        let parsedResponse = operationRes.parsedBody as { [key: string]: any };
         try {
           if (parsedResponse !== null && parsedResponse !== undefined) {
             let resultMapper = Mappers.Catalog;
-            operationRes.bodyAsJson = client.serializer.deserialize(resultMapper, parsedResponse, 'operationRes.bodyAsJson');
+            operationRes.parsedBody = client.serializer.deserialize(resultMapper, parsedResponse, 'operationRes.parsedBody');
           }
         } catch (error) {
           let deserializationError = new msRest.RestError(`Error ${error} occurred in deserializing the responseBody - ${operationRes.bodyAsText}`);
@@ -229,7 +229,7 @@ export class CatalogOperations {
         error.statusCode = response.status;
         error.request = msRest.stripRequest(httpRequest);
         error.response = msRest.stripResponse(response);
-        let parsedErrorResponse = operationRes.bodyAsJson as { [key: string]: any };
+        let parsedErrorResponse = operationRes.parsedBody as { [key: string]: any };
         try {
           if (parsedErrorResponse) {
             let internalError = null;
@@ -250,11 +250,11 @@ export class CatalogOperations {
       }
       // Deserialize Response
       if (statusCode === 200) {
-        let parsedResponse = operationRes.bodyAsJson as { [key: string]: any };
+        let parsedResponse = operationRes.parsedBody as { [key: string]: any };
         try {
           if (parsedResponse !== null && parsedResponse !== undefined) {
             let resultMapper = Mappers.Catalog;
-            operationRes.bodyAsJson = client.serializer.deserialize(resultMapper, parsedResponse, 'operationRes.bodyAsJson');
+            operationRes.parsedBody = client.serializer.deserialize(resultMapper, parsedResponse, 'operationRes.parsedBody');
           }
         } catch (error) {
           let deserializationError = new msRest.RestError(`Error ${error} occurred in deserializing the responseBody - ${operationRes.bodyAsText}`);
@@ -312,7 +312,7 @@ export class CatalogOperations {
         error.statusCode = response.status;
         error.request = msRest.stripRequest(httpRequest);
         error.response = msRest.stripResponse(response);
-        let parsedErrorResponse = operationRes.bodyAsJson as { [key: string]: any };
+        let parsedErrorResponse = operationRes.parsedBody as { [key: string]: any };
         try {
           if (parsedErrorResponse) {
             let internalError = null;
@@ -333,11 +333,11 @@ export class CatalogOperations {
       }
       // Deserialize Response
       if (statusCode === 200) {
-        let parsedResponse = operationRes.bodyAsJson as { [key: string]: any };
+        let parsedResponse = operationRes.parsedBody as { [key: string]: any };
         try {
           if (parsedResponse !== null && parsedResponse !== undefined) {
             let resultMapper = Mappers.Catalog;
-            operationRes.bodyAsJson = client.serializer.deserialize(resultMapper, parsedResponse, 'operationRes.bodyAsJson');
+            operationRes.parsedBody = client.serializer.deserialize(resultMapper, parsedResponse, 'operationRes.parsedBody');
           }
         } catch (error) {
           let deserializationError = new msRest.RestError(`Error ${error} occurred in deserializing the responseBody - ${operationRes.bodyAsText}`);
@@ -395,7 +395,7 @@ export class CatalogOperations {
         error.statusCode = response.status;
         error.request = msRest.stripRequest(httpRequest);
         error.response = msRest.stripResponse(response);
-        let parsedErrorResponse = operationRes.bodyAsJson as { [key: string]: any };
+        let parsedErrorResponse = operationRes.parsedBody as { [key: string]: any };
         try {
           if (parsedErrorResponse) {
             let internalError = null;
@@ -416,11 +416,11 @@ export class CatalogOperations {
       }
       // Deserialize Response
       if (statusCode === 200) {
-        let parsedResponse = operationRes.bodyAsJson as { [key: string]: any };
+        let parsedResponse = operationRes.parsedBody as { [key: string]: any };
         try {
           if (parsedResponse !== null && parsedResponse !== undefined) {
             let resultMapper = Mappers.Catalog;
-            operationRes.bodyAsJson = client.serializer.deserialize(resultMapper, parsedResponse, 'operationRes.bodyAsJson');
+            operationRes.parsedBody = client.serializer.deserialize(resultMapper, parsedResponse, 'operationRes.parsedBody');
           }
         } catch (error) {
           let deserializationError = new msRest.RestError(`Error ${error} occurred in deserializing the responseBody - ${operationRes.bodyAsText}`);
@@ -478,7 +478,7 @@ export class CatalogOperations {
         error.statusCode = response.status;
         error.request = msRest.stripRequest(httpRequest);
         error.response = msRest.stripResponse(response);
-        let parsedErrorResponse = operationRes.bodyAsJson as { [key: string]: any };
+        let parsedErrorResponse = operationRes.parsedBody as { [key: string]: any };
         try {
           if (parsedErrorResponse) {
             let internalError = null;
@@ -499,11 +499,11 @@ export class CatalogOperations {
       }
       // Deserialize Response
       if (statusCode === 200) {
-        let parsedResponse = operationRes.bodyAsJson as { [key: string]: any };
+        let parsedResponse = operationRes.parsedBody as { [key: string]: any };
         try {
           if (parsedResponse !== null && parsedResponse !== undefined) {
             let resultMapper = Mappers.Catalog;
-            operationRes.bodyAsJson = client.serializer.deserialize(resultMapper, parsedResponse, 'operationRes.bodyAsJson');
+            operationRes.parsedBody = client.serializer.deserialize(resultMapper, parsedResponse, 'operationRes.parsedBody');
           }
         } catch (error) {
           let deserializationError = new msRest.RestError(`Error ${error} occurred in deserializing the responseBody - ${operationRes.bodyAsText}`);
@@ -561,7 +561,7 @@ export class CatalogOperations {
         error.statusCode = response.status;
         error.request = msRest.stripRequest(httpRequest);
         error.response = msRest.stripResponse(response);
-        let parsedErrorResponse = operationRes.bodyAsJson as { [key: string]: any };
+        let parsedErrorResponse = operationRes.parsedBody as { [key: string]: any };
         try {
           if (parsedErrorResponse) {
             let internalError = null;
@@ -582,11 +582,11 @@ export class CatalogOperations {
       }
       // Deserialize Response
       if (statusCode === 200) {
-        let parsedResponse = operationRes.bodyAsJson as { [key: string]: any };
+        let parsedResponse = operationRes.parsedBody as { [key: string]: any };
         try {
           if (parsedResponse !== null && parsedResponse !== undefined) {
             let resultMapper = Mappers.Catalog;
-            operationRes.bodyAsJson = client.serializer.deserialize(resultMapper, parsedResponse, 'operationRes.bodyAsJson');
+            operationRes.parsedBody = client.serializer.deserialize(resultMapper, parsedResponse, 'operationRes.parsedBody');
           }
         } catch (error) {
           let deserializationError = new msRest.RestError(`Error ${error} occurred in deserializing the responseBody - ${operationRes.bodyAsText}`);
@@ -644,7 +644,7 @@ export class CatalogOperations {
         error.statusCode = response.status;
         error.request = msRest.stripRequest(httpRequest);
         error.response = msRest.stripResponse(response);
-        let parsedErrorResponse = operationRes.bodyAsJson as { [key: string]: any };
+        let parsedErrorResponse = operationRes.parsedBody as { [key: string]: any };
         try {
           if (parsedErrorResponse) {
             let internalError = null;
@@ -665,11 +665,11 @@ export class CatalogOperations {
       }
       // Deserialize Response
       if (statusCode === 200) {
-        let parsedResponse = operationRes.bodyAsJson as { [key: string]: any };
+        let parsedResponse = operationRes.parsedBody as { [key: string]: any };
         try {
           if (parsedResponse !== null && parsedResponse !== undefined) {
             let resultMapper = Mappers.Catalog;
-            operationRes.bodyAsJson = client.serializer.deserialize(resultMapper, parsedResponse, 'operationRes.bodyAsJson');
+            operationRes.parsedBody = client.serializer.deserialize(resultMapper, parsedResponse, 'operationRes.parsedBody');
           }
         } catch (error) {
           let deserializationError = new msRest.RestError(`Error ${error} occurred in deserializing the responseBody - ${operationRes.bodyAsText}`);
@@ -727,7 +727,7 @@ export class CatalogOperations {
         error.statusCode = response.status;
         error.request = msRest.stripRequest(httpRequest);
         error.response = msRest.stripResponse(response);
-        let parsedErrorResponse = operationRes.bodyAsJson as { [key: string]: any };
+        let parsedErrorResponse = operationRes.parsedBody as { [key: string]: any };
         try {
           if (parsedErrorResponse) {
             let internalError = null;
@@ -748,11 +748,11 @@ export class CatalogOperations {
       }
       // Deserialize Response
       if (statusCode === 200) {
-        let parsedResponse = operationRes.bodyAsJson as { [key: string]: any };
+        let parsedResponse = operationRes.parsedBody as { [key: string]: any };
         try {
           if (parsedResponse !== null && parsedResponse !== undefined) {
             let resultMapper = Mappers.Catalog;
-            operationRes.bodyAsJson = client.serializer.deserialize(resultMapper, parsedResponse, 'operationRes.bodyAsJson');
+            operationRes.parsedBody = client.serializer.deserialize(resultMapper, parsedResponse, 'operationRes.parsedBody');
           }
         } catch (error) {
           let deserializationError = new msRest.RestError(`Error ${error} occurred in deserializing the responseBody - ${operationRes.bodyAsText}`);
@@ -810,7 +810,7 @@ export class CatalogOperations {
         error.statusCode = response.status;
         error.request = msRest.stripRequest(httpRequest);
         error.response = msRest.stripResponse(response);
-        let parsedErrorResponse = operationRes.bodyAsJson as { [key: string]: any };
+        let parsedErrorResponse = operationRes.parsedBody as { [key: string]: any };
         try {
           if (parsedErrorResponse) {
             let internalError = null;
@@ -831,11 +831,11 @@ export class CatalogOperations {
       }
       // Deserialize Response
       if (statusCode === 200) {
-        let parsedResponse = operationRes.bodyAsJson as { [key: string]: any };
+        let parsedResponse = operationRes.parsedBody as { [key: string]: any };
         try {
           if (parsedResponse !== null && parsedResponse !== undefined) {
             let resultMapper = Mappers.Catalog;
-            operationRes.bodyAsJson = client.serializer.deserialize(resultMapper, parsedResponse, 'operationRes.bodyAsJson');
+            operationRes.parsedBody = client.serializer.deserialize(resultMapper, parsedResponse, 'operationRes.parsedBody');
           }
         } catch (error) {
           let deserializationError = new msRest.RestError(`Error ${error} occurred in deserializing the responseBody - ${operationRes.bodyAsText}`);
@@ -893,7 +893,7 @@ export class CatalogOperations {
         error.statusCode = response.status;
         error.request = msRest.stripRequest(httpRequest);
         error.response = msRest.stripResponse(response);
-        let parsedErrorResponse = operationRes.bodyAsJson as { [key: string]: any };
+        let parsedErrorResponse = operationRes.parsedBody as { [key: string]: any };
         try {
           if (parsedErrorResponse) {
             let internalError = null;
@@ -914,11 +914,11 @@ export class CatalogOperations {
       }
       // Deserialize Response
       if (statusCode === 200) {
-        let parsedResponse = operationRes.bodyAsJson as { [key: string]: any };
+        let parsedResponse = operationRes.parsedBody as { [key: string]: any };
         try {
           if (parsedResponse !== null && parsedResponse !== undefined) {
             let resultMapper = Mappers.Catalog;
-            operationRes.bodyAsJson = client.serializer.deserialize(resultMapper, parsedResponse, 'operationRes.bodyAsJson');
+            operationRes.parsedBody = client.serializer.deserialize(resultMapper, parsedResponse, 'operationRes.parsedBody');
           }
         } catch (error) {
           let deserializationError = new msRest.RestError(`Error ${error} occurred in deserializing the responseBody - ${operationRes.bodyAsText}`);
@@ -976,7 +976,7 @@ export class CatalogOperations {
         error.statusCode = response.status;
         error.request = msRest.stripRequest(httpRequest);
         error.response = msRest.stripResponse(response);
-        let parsedErrorResponse = operationRes.bodyAsJson as { [key: string]: any };
+        let parsedErrorResponse = operationRes.parsedBody as { [key: string]: any };
         try {
           if (parsedErrorResponse) {
             let internalError = null;
@@ -997,11 +997,11 @@ export class CatalogOperations {
       }
       // Deserialize Response
       if (statusCode === 200) {
-        let parsedResponse = operationRes.bodyAsJson as { [key: string]: any };
+        let parsedResponse = operationRes.parsedBody as { [key: string]: any };
         try {
           if (parsedResponse !== null && parsedResponse !== undefined) {
             let resultMapper = Mappers.Catalog;
-            operationRes.bodyAsJson = client.serializer.deserialize(resultMapper, parsedResponse, 'operationRes.bodyAsJson');
+            operationRes.parsedBody = client.serializer.deserialize(resultMapper, parsedResponse, 'operationRes.parsedBody');
           }
         } catch (error) {
           let deserializationError = new msRest.RestError(`Error ${error} occurred in deserializing the responseBody - ${operationRes.bodyAsText}`);
@@ -1046,7 +1046,7 @@ export class CatalogOperations {
     let cb = callback as msRest.ServiceCallback<Models.Catalog>;
     if (!callback) {
       return this.getCardNamesWithHttpOperationResponse(options).then((operationRes: msRest.HttpOperationResponse) => {
-        return Promise.resolve(operationRes.bodyAsJson as Models.Catalog);
+        return Promise.resolve(operationRes.parsedBody as Models.Catalog);
       }).catch((err: Error) => {
         return Promise.reject(err);
       });
@@ -1055,7 +1055,7 @@ export class CatalogOperations {
         if (err) {
           return cb(err);
         }
-        let result = data.bodyAsJson as Models.Catalog;
+        let result = data.parsedBody as Models.Catalog;
         return cb(err, result, data.request, data.response);
       });
     }
@@ -1089,7 +1089,7 @@ export class CatalogOperations {
     let cb = callback as msRest.ServiceCallback<Models.Catalog>;
     if (!callback) {
       return this.getWordBankWithHttpOperationResponse(options).then((operationRes: msRest.HttpOperationResponse) => {
-        return Promise.resolve(operationRes.bodyAsJson as Models.Catalog);
+        return Promise.resolve(operationRes.parsedBody as Models.Catalog);
       }).catch((err: Error) => {
         return Promise.reject(err);
       });
@@ -1098,7 +1098,7 @@ export class CatalogOperations {
         if (err) {
           return cb(err);
         }
-        let result = data.bodyAsJson as Models.Catalog;
+        let result = data.parsedBody as Models.Catalog;
         return cb(err, result, data.request, data.response);
       });
     }
@@ -1132,7 +1132,7 @@ export class CatalogOperations {
     let cb = callback as msRest.ServiceCallback<Models.Catalog>;
     if (!callback) {
       return this.getCreatureTypesWithHttpOperationResponse(options).then((operationRes: msRest.HttpOperationResponse) => {
-        return Promise.resolve(operationRes.bodyAsJson as Models.Catalog);
+        return Promise.resolve(operationRes.parsedBody as Models.Catalog);
       }).catch((err: Error) => {
         return Promise.reject(err);
       });
@@ -1141,7 +1141,7 @@ export class CatalogOperations {
         if (err) {
           return cb(err);
         }
-        let result = data.bodyAsJson as Models.Catalog;
+        let result = data.parsedBody as Models.Catalog;
         return cb(err, result, data.request, data.response);
       });
     }
@@ -1175,7 +1175,7 @@ export class CatalogOperations {
     let cb = callback as msRest.ServiceCallback<Models.Catalog>;
     if (!callback) {
       return this.getPlaneswalkerTypesWithHttpOperationResponse(options).then((operationRes: msRest.HttpOperationResponse) => {
-        return Promise.resolve(operationRes.bodyAsJson as Models.Catalog);
+        return Promise.resolve(operationRes.parsedBody as Models.Catalog);
       }).catch((err: Error) => {
         return Promise.reject(err);
       });
@@ -1184,7 +1184,7 @@ export class CatalogOperations {
         if (err) {
           return cb(err);
         }
-        let result = data.bodyAsJson as Models.Catalog;
+        let result = data.parsedBody as Models.Catalog;
         return cb(err, result, data.request, data.response);
       });
     }
@@ -1218,7 +1218,7 @@ export class CatalogOperations {
     let cb = callback as msRest.ServiceCallback<Models.Catalog>;
     if (!callback) {
       return this.getLandTypesWithHttpOperationResponse(options).then((operationRes: msRest.HttpOperationResponse) => {
-        return Promise.resolve(operationRes.bodyAsJson as Models.Catalog);
+        return Promise.resolve(operationRes.parsedBody as Models.Catalog);
       }).catch((err: Error) => {
         return Promise.reject(err);
       });
@@ -1227,7 +1227,7 @@ export class CatalogOperations {
         if (err) {
           return cb(err);
         }
-        let result = data.bodyAsJson as Models.Catalog;
+        let result = data.parsedBody as Models.Catalog;
         return cb(err, result, data.request, data.response);
       });
     }
@@ -1261,7 +1261,7 @@ export class CatalogOperations {
     let cb = callback as msRest.ServiceCallback<Models.Catalog>;
     if (!callback) {
       return this.getArtifactTypesWithHttpOperationResponse(options).then((operationRes: msRest.HttpOperationResponse) => {
-        return Promise.resolve(operationRes.bodyAsJson as Models.Catalog);
+        return Promise.resolve(operationRes.parsedBody as Models.Catalog);
       }).catch((err: Error) => {
         return Promise.reject(err);
       });
@@ -1270,7 +1270,7 @@ export class CatalogOperations {
         if (err) {
           return cb(err);
         }
-        let result = data.bodyAsJson as Models.Catalog;
+        let result = data.parsedBody as Models.Catalog;
         return cb(err, result, data.request, data.response);
       });
     }
@@ -1304,7 +1304,7 @@ export class CatalogOperations {
     let cb = callback as msRest.ServiceCallback<Models.Catalog>;
     if (!callback) {
       return this.getEnchantmentTypesWithHttpOperationResponse(options).then((operationRes: msRest.HttpOperationResponse) => {
-        return Promise.resolve(operationRes.bodyAsJson as Models.Catalog);
+        return Promise.resolve(operationRes.parsedBody as Models.Catalog);
       }).catch((err: Error) => {
         return Promise.reject(err);
       });
@@ -1313,7 +1313,7 @@ export class CatalogOperations {
         if (err) {
           return cb(err);
         }
-        let result = data.bodyAsJson as Models.Catalog;
+        let result = data.parsedBody as Models.Catalog;
         return cb(err, result, data.request, data.response);
       });
     }
@@ -1347,7 +1347,7 @@ export class CatalogOperations {
     let cb = callback as msRest.ServiceCallback<Models.Catalog>;
     if (!callback) {
       return this.getSpellTypesWithHttpOperationResponse(options).then((operationRes: msRest.HttpOperationResponse) => {
-        return Promise.resolve(operationRes.bodyAsJson as Models.Catalog);
+        return Promise.resolve(operationRes.parsedBody as Models.Catalog);
       }).catch((err: Error) => {
         return Promise.reject(err);
       });
@@ -1356,7 +1356,7 @@ export class CatalogOperations {
         if (err) {
           return cb(err);
         }
-        let result = data.bodyAsJson as Models.Catalog;
+        let result = data.parsedBody as Models.Catalog;
         return cb(err, result, data.request, data.response);
       });
     }
@@ -1390,7 +1390,7 @@ export class CatalogOperations {
     let cb = callback as msRest.ServiceCallback<Models.Catalog>;
     if (!callback) {
       return this.getPowersWithHttpOperationResponse(options).then((operationRes: msRest.HttpOperationResponse) => {
-        return Promise.resolve(operationRes.bodyAsJson as Models.Catalog);
+        return Promise.resolve(operationRes.parsedBody as Models.Catalog);
       }).catch((err: Error) => {
         return Promise.reject(err);
       });
@@ -1399,7 +1399,7 @@ export class CatalogOperations {
         if (err) {
           return cb(err);
         }
-        let result = data.bodyAsJson as Models.Catalog;
+        let result = data.parsedBody as Models.Catalog;
         return cb(err, result, data.request, data.response);
       });
     }
@@ -1433,7 +1433,7 @@ export class CatalogOperations {
     let cb = callback as msRest.ServiceCallback<Models.Catalog>;
     if (!callback) {
       return this.getToughnessesWithHttpOperationResponse(options).then((operationRes: msRest.HttpOperationResponse) => {
-        return Promise.resolve(operationRes.bodyAsJson as Models.Catalog);
+        return Promise.resolve(operationRes.parsedBody as Models.Catalog);
       }).catch((err: Error) => {
         return Promise.reject(err);
       });
@@ -1442,7 +1442,7 @@ export class CatalogOperations {
         if (err) {
           return cb(err);
         }
-        let result = data.bodyAsJson as Models.Catalog;
+        let result = data.parsedBody as Models.Catalog;
         return cb(err, result, data.request, data.response);
       });
     }
@@ -1476,7 +1476,7 @@ export class CatalogOperations {
     let cb = callback as msRest.ServiceCallback<Models.Catalog>;
     if (!callback) {
       return this.getLoyaltiesWithHttpOperationResponse(options).then((operationRes: msRest.HttpOperationResponse) => {
-        return Promise.resolve(operationRes.bodyAsJson as Models.Catalog);
+        return Promise.resolve(operationRes.parsedBody as Models.Catalog);
       }).catch((err: Error) => {
         return Promise.reject(err);
       });
@@ -1485,7 +1485,7 @@ export class CatalogOperations {
         if (err) {
           return cb(err);
         }
-        let result = data.bodyAsJson as Models.Catalog;
+        let result = data.parsedBody as Models.Catalog;
         return cb(err, result, data.request, data.response);
       });
     }
@@ -1519,7 +1519,7 @@ export class CatalogOperations {
     let cb = callback as msRest.ServiceCallback<Models.Catalog>;
     if (!callback) {
       return this.getWatermarksWithHttpOperationResponse(options).then((operationRes: msRest.HttpOperationResponse) => {
-        return Promise.resolve(operationRes.bodyAsJson as Models.Catalog);
+        return Promise.resolve(operationRes.parsedBody as Models.Catalog);
       }).catch((err: Error) => {
         return Promise.reject(err);
       });
@@ -1528,7 +1528,7 @@ export class CatalogOperations {
         if (err) {
           return cb(err);
         }
-        let result = data.bodyAsJson as Models.Catalog;
+        let result = data.parsedBody as Models.Catalog;
         return cb(err, result, data.request, data.response);
       });
     }

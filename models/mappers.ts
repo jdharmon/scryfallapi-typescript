@@ -129,8 +129,15 @@ export const CardFace = {
         required: false,
         serializedName: 'colors',
         type: {
-          name: 'Enum',
-          allowedValues: [ 'W', 'U', 'B', 'R', 'G' ]
+          name: 'Sequence',
+          element: {
+              required: false,
+              serializedName: 'ColorsElementType',
+              type: {
+                name: 'Enum',
+                allowedValues: [ 'W', 'U', 'B', 'R', 'G' ]
+              }
+          }
         }
       },
       colorIndicator: {

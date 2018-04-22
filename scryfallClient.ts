@@ -57,7 +57,7 @@ class ScryfallClient extends msRest.ServiceClient {
     this.rulings = new operations.Rulings(this);
     this.symbology = new operations.Symbology(this);
     this.catalog = new operations.CatalogOperations(this);
-    this.serializer = new msRest.Serializer(Mappers);
+    this.serializer = new msRest.Serializer(Mappers, false);
   }
 }
 

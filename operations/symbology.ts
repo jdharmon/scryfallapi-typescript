@@ -63,7 +63,7 @@ export class Symbology {
         error.statusCode = response.status;
         error.request = msRest.stripRequest(httpRequest);
         error.response = msRest.stripResponse(response);
-        let parsedErrorResponse = operationRes.bodyAsJson as { [key: string]: any };
+        let parsedErrorResponse = operationRes.parsedBody as { [key: string]: any };
         try {
           if (parsedErrorResponse) {
             let internalError = null;
@@ -84,11 +84,11 @@ export class Symbology {
       }
       // Deserialize Response
       if (statusCode === 200) {
-        let parsedResponse = operationRes.bodyAsJson as { [key: string]: any };
+        let parsedResponse = operationRes.parsedBody as { [key: string]: any };
         try {
           if (parsedResponse !== null && parsedResponse !== undefined) {
             let resultMapper = Mappers.CardSymbolList;
-            operationRes.bodyAsJson = client.serializer.deserialize(resultMapper, parsedResponse, 'operationRes.bodyAsJson');
+            operationRes.parsedBody = client.serializer.deserialize(resultMapper, parsedResponse, 'operationRes.parsedBody');
           }
         } catch (error) {
           let deserializationError = new msRest.RestError(`Error ${error} occurred in deserializing the responseBody - ${operationRes.bodyAsText}`);
@@ -161,7 +161,7 @@ export class Symbology {
         error.statusCode = response.status;
         error.request = msRest.stripRequest(httpRequest);
         error.response = msRest.stripResponse(response);
-        let parsedErrorResponse = operationRes.bodyAsJson as { [key: string]: any };
+        let parsedErrorResponse = operationRes.parsedBody as { [key: string]: any };
         try {
           if (parsedErrorResponse) {
             let internalError = null;
@@ -182,11 +182,11 @@ export class Symbology {
       }
       // Deserialize Response
       if (statusCode === 201) {
-        let parsedResponse = operationRes.bodyAsJson as { [key: string]: any };
+        let parsedResponse = operationRes.parsedBody as { [key: string]: any };
         try {
           if (parsedResponse !== null && parsedResponse !== undefined) {
             let resultMapper = Mappers.ManaCost;
-            operationRes.bodyAsJson = client.serializer.deserialize(resultMapper, parsedResponse, 'operationRes.bodyAsJson');
+            operationRes.parsedBody = client.serializer.deserialize(resultMapper, parsedResponse, 'operationRes.parsedBody');
           }
         } catch (error) {
           let deserializationError = new msRest.RestError(`Error ${error} occurred in deserializing the responseBody - ${operationRes.bodyAsText}`);
@@ -231,7 +231,7 @@ export class Symbology {
     let cb = callback as msRest.ServiceCallback<Models.CardSymbolList>;
     if (!callback) {
       return this.getAllWithHttpOperationResponse(options).then((operationRes: msRest.HttpOperationResponse) => {
-        return Promise.resolve(operationRes.bodyAsJson as Models.CardSymbolList);
+        return Promise.resolve(operationRes.parsedBody as Models.CardSymbolList);
       }).catch((err: Error) => {
         return Promise.reject(err);
       });
@@ -240,7 +240,7 @@ export class Symbology {
         if (err) {
           return cb(err);
         }
-        let result = data.bodyAsJson as Models.CardSymbolList;
+        let result = data.parsedBody as Models.CardSymbolList;
         return cb(err, result, data.request, data.response);
       });
     }
@@ -276,7 +276,7 @@ export class Symbology {
     let cb = callback as msRest.ServiceCallback<Models.ManaCost>;
     if (!callback) {
       return this.parseManaWithHttpOperationResponse(cost, options).then((operationRes: msRest.HttpOperationResponse) => {
-        return Promise.resolve(operationRes.bodyAsJson as Models.ManaCost);
+        return Promise.resolve(operationRes.parsedBody as Models.ManaCost);
       }).catch((err: Error) => {
         return Promise.reject(err);
       });
@@ -285,7 +285,7 @@ export class Symbology {
         if (err) {
           return cb(err);
         }
-        let result = data.bodyAsJson as Models.ManaCost;
+        let result = data.parsedBody as Models.ManaCost;
         return cb(err, result, data.request, data.response);
       });
     }

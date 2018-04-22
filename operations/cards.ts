@@ -79,7 +79,7 @@ export class Cards {
         error.statusCode = response.status;
         error.request = msRest.stripRequest(httpRequest);
         error.response = msRest.stripResponse(response);
-        let parsedErrorResponse = operationRes.bodyAsJson as { [key: string]: any };
+        let parsedErrorResponse = operationRes.parsedBody as { [key: string]: any };
         try {
           if (parsedErrorResponse) {
             let internalError = null;
@@ -100,11 +100,11 @@ export class Cards {
       }
       // Deserialize Response
       if (statusCode === 200) {
-        let parsedResponse = operationRes.bodyAsJson as { [key: string]: any };
+        let parsedResponse = operationRes.parsedBody as { [key: string]: any };
         try {
           if (parsedResponse !== null && parsedResponse !== undefined) {
             let resultMapper = Mappers.CardList;
-            operationRes.bodyAsJson = client.serializer.deserialize(resultMapper, parsedResponse, 'operationRes.bodyAsJson');
+            operationRes.parsedBody = client.serializer.deserialize(resultMapper, parsedResponse, 'operationRes.parsedBody');
           }
         } catch (error) {
           let deserializationError = new msRest.RestError(`Error ${error} occurred in deserializing the responseBody - ${operationRes.bodyAsText}`);
@@ -221,7 +221,7 @@ export class Cards {
         error.statusCode = response.status;
         error.request = msRest.stripRequest(httpRequest);
         error.response = msRest.stripResponse(response);
-        let parsedErrorResponse = operationRes.bodyAsJson as { [key: string]: any };
+        let parsedErrorResponse = operationRes.parsedBody as { [key: string]: any };
         try {
           if (parsedErrorResponse) {
             let internalError = null;
@@ -242,11 +242,11 @@ export class Cards {
       }
       // Deserialize Response
       if (statusCode === 200) {
-        let parsedResponse = operationRes.bodyAsJson as { [key: string]: any };
+        let parsedResponse = operationRes.parsedBody as { [key: string]: any };
         try {
           if (parsedResponse !== null && parsedResponse !== undefined) {
             let resultMapper = Mappers.CardList;
-            operationRes.bodyAsJson = client.serializer.deserialize(resultMapper, parsedResponse, 'operationRes.bodyAsJson');
+            operationRes.parsedBody = client.serializer.deserialize(resultMapper, parsedResponse, 'operationRes.parsedBody');
           }
         } catch (error) {
           let deserializationError = new msRest.RestError(`Error ${error} occurred in deserializing the responseBody - ${operationRes.bodyAsText}`);
@@ -362,7 +362,7 @@ export class Cards {
         error.statusCode = response.status;
         error.request = msRest.stripRequest(httpRequest);
         error.response = msRest.stripResponse(response);
-        let parsedErrorResponse = operationRes.bodyAsJson as { [key: string]: any };
+        let parsedErrorResponse = operationRes.parsedBody as { [key: string]: any };
         try {
           if (parsedErrorResponse) {
             let internalError = null;
@@ -383,11 +383,11 @@ export class Cards {
       }
       // Deserialize Response
       if (statusCode === 200) {
-        let parsedResponse = operationRes.bodyAsJson as { [key: string]: any };
+        let parsedResponse = operationRes.parsedBody as { [key: string]: any };
         try {
           if (parsedResponse !== null && parsedResponse !== undefined) {
             let resultMapper = Mappers.Card;
-            operationRes.bodyAsJson = client.serializer.deserialize(resultMapper, parsedResponse, 'operationRes.bodyAsJson');
+            operationRes.parsedBody = client.serializer.deserialize(resultMapper, parsedResponse, 'operationRes.parsedBody');
           }
         } catch (error) {
           let deserializationError = new msRest.RestError(`Error ${error} occurred in deserializing the responseBody - ${operationRes.bodyAsText}`);
@@ -460,7 +460,7 @@ export class Cards {
         error.statusCode = response.status;
         error.request = msRest.stripRequest(httpRequest);
         error.response = msRest.stripResponse(response);
-        let parsedErrorResponse = operationRes.bodyAsJson as { [key: string]: any };
+        let parsedErrorResponse = operationRes.parsedBody as { [key: string]: any };
         try {
           if (parsedErrorResponse) {
             let internalError = null;
@@ -481,11 +481,11 @@ export class Cards {
       }
       // Deserialize Response
       if (statusCode === 200) {
-        let parsedResponse = operationRes.bodyAsJson as { [key: string]: any };
+        let parsedResponse = operationRes.parsedBody as { [key: string]: any };
         try {
           if (parsedResponse !== null && parsedResponse !== undefined) {
             let resultMapper = Mappers.Catalog;
-            operationRes.bodyAsJson = client.serializer.deserialize(resultMapper, parsedResponse, 'operationRes.bodyAsJson');
+            operationRes.parsedBody = client.serializer.deserialize(resultMapper, parsedResponse, 'operationRes.parsedBody');
           }
         } catch (error) {
           let deserializationError = new msRest.RestError(`Error ${error} occurred in deserializing the responseBody - ${operationRes.bodyAsText}`);
@@ -543,7 +543,7 @@ export class Cards {
         error.statusCode = response.status;
         error.request = msRest.stripRequest(httpRequest);
         error.response = msRest.stripResponse(response);
-        let parsedErrorResponse = operationRes.bodyAsJson as { [key: string]: any };
+        let parsedErrorResponse = operationRes.parsedBody as { [key: string]: any };
         try {
           if (parsedErrorResponse) {
             let internalError = null;
@@ -564,11 +564,11 @@ export class Cards {
       }
       // Deserialize Response
       if (statusCode === 200) {
-        let parsedResponse = operationRes.bodyAsJson as { [key: string]: any };
+        let parsedResponse = operationRes.parsedBody as { [key: string]: any };
         try {
           if (parsedResponse !== null && parsedResponse !== undefined) {
             let resultMapper = Mappers.Card;
-            operationRes.bodyAsJson = client.serializer.deserialize(resultMapper, parsedResponse, 'operationRes.bodyAsJson');
+            operationRes.parsedBody = client.serializer.deserialize(resultMapper, parsedResponse, 'operationRes.parsedBody');
           }
         } catch (error) {
           let deserializationError = new msRest.RestError(`Error ${error} occurred in deserializing the responseBody - ${operationRes.bodyAsText}`);
@@ -637,7 +637,7 @@ export class Cards {
         error.statusCode = response.status;
         error.request = msRest.stripRequest(httpRequest);
         error.response = msRest.stripResponse(response);
-        let parsedErrorResponse = operationRes.bodyAsJson as { [key: string]: any };
+        let parsedErrorResponse = operationRes.parsedBody as { [key: string]: any };
         try {
           if (parsedErrorResponse) {
             let internalError = null;
@@ -658,11 +658,11 @@ export class Cards {
       }
       // Deserialize Response
       if (statusCode === 200) {
-        let parsedResponse = operationRes.bodyAsJson as { [key: string]: any };
+        let parsedResponse = operationRes.parsedBody as { [key: string]: any };
         try {
           if (parsedResponse !== null && parsedResponse !== undefined) {
             let resultMapper = Mappers.Card;
-            operationRes.bodyAsJson = client.serializer.deserialize(resultMapper, parsedResponse, 'operationRes.bodyAsJson');
+            operationRes.parsedBody = client.serializer.deserialize(resultMapper, parsedResponse, 'operationRes.parsedBody');
           }
         } catch (error) {
           let deserializationError = new msRest.RestError(`Error ${error} occurred in deserializing the responseBody - ${operationRes.bodyAsText}`);
@@ -731,7 +731,7 @@ export class Cards {
         error.statusCode = response.status;
         error.request = msRest.stripRequest(httpRequest);
         error.response = msRest.stripResponse(response);
-        let parsedErrorResponse = operationRes.bodyAsJson as { [key: string]: any };
+        let parsedErrorResponse = operationRes.parsedBody as { [key: string]: any };
         try {
           if (parsedErrorResponse) {
             let internalError = null;
@@ -752,11 +752,11 @@ export class Cards {
       }
       // Deserialize Response
       if (statusCode === 200) {
-        let parsedResponse = operationRes.bodyAsJson as { [key: string]: any };
+        let parsedResponse = operationRes.parsedBody as { [key: string]: any };
         try {
           if (parsedResponse !== null && parsedResponse !== undefined) {
             let resultMapper = Mappers.Card;
-            operationRes.bodyAsJson = client.serializer.deserialize(resultMapper, parsedResponse, 'operationRes.bodyAsJson');
+            operationRes.parsedBody = client.serializer.deserialize(resultMapper, parsedResponse, 'operationRes.parsedBody');
           }
         } catch (error) {
           let deserializationError = new msRest.RestError(`Error ${error} occurred in deserializing the responseBody - ${operationRes.bodyAsText}`);
@@ -831,7 +831,7 @@ export class Cards {
         error.statusCode = response.status;
         error.request = msRest.stripRequest(httpRequest);
         error.response = msRest.stripResponse(response);
-        let parsedErrorResponse = operationRes.bodyAsJson as { [key: string]: any };
+        let parsedErrorResponse = operationRes.parsedBody as { [key: string]: any };
         try {
           if (parsedErrorResponse) {
             let internalError = null;
@@ -852,11 +852,11 @@ export class Cards {
       }
       // Deserialize Response
       if (statusCode === 200) {
-        let parsedResponse = operationRes.bodyAsJson as { [key: string]: any };
+        let parsedResponse = operationRes.parsedBody as { [key: string]: any };
         try {
           if (parsedResponse !== null && parsedResponse !== undefined) {
             let resultMapper = Mappers.Card;
-            operationRes.bodyAsJson = client.serializer.deserialize(resultMapper, parsedResponse, 'operationRes.bodyAsJson');
+            operationRes.parsedBody = client.serializer.deserialize(resultMapper, parsedResponse, 'operationRes.parsedBody');
           }
         } catch (error) {
           let deserializationError = new msRest.RestError(`Error ${error} occurred in deserializing the responseBody - ${operationRes.bodyAsText}`);
@@ -925,7 +925,7 @@ export class Cards {
         error.statusCode = response.status;
         error.request = msRest.stripRequest(httpRequest);
         error.response = msRest.stripResponse(response);
-        let parsedErrorResponse = operationRes.bodyAsJson as { [key: string]: any };
+        let parsedErrorResponse = operationRes.parsedBody as { [key: string]: any };
         try {
           if (parsedErrorResponse) {
             let internalError = null;
@@ -946,11 +946,11 @@ export class Cards {
       }
       // Deserialize Response
       if (statusCode === 200) {
-        let parsedResponse = operationRes.bodyAsJson as { [key: string]: any };
+        let parsedResponse = operationRes.parsedBody as { [key: string]: any };
         try {
           if (parsedResponse !== null && parsedResponse !== undefined) {
             let resultMapper = Mappers.Card;
-            operationRes.bodyAsJson = client.serializer.deserialize(resultMapper, parsedResponse, 'operationRes.bodyAsJson');
+            operationRes.parsedBody = client.serializer.deserialize(resultMapper, parsedResponse, 'operationRes.parsedBody');
           }
         } catch (error) {
           let deserializationError = new msRest.RestError(`Error ${error} occurred in deserializing the responseBody - ${operationRes.bodyAsText}`);
@@ -995,7 +995,7 @@ export class Cards {
     let cb = callback as msRest.ServiceCallback<Models.CardList>;
     if (!callback) {
       return this.getAllWithHttpOperationResponse(options).then((operationRes: msRest.HttpOperationResponse) => {
-        return Promise.resolve(operationRes.bodyAsJson as Models.CardList);
+        return Promise.resolve(operationRes.parsedBody as Models.CardList);
       }).catch((err: Error) => {
         return Promise.reject(err);
       });
@@ -1004,7 +1004,7 @@ export class Cards {
         if (err) {
           return cb(err);
         }
-        let result = data.bodyAsJson as Models.CardList;
+        let result = data.parsedBody as Models.CardList;
         return cb(err, result, data.request, data.response);
       });
     }
@@ -1040,7 +1040,7 @@ export class Cards {
     let cb = callback as msRest.ServiceCallback<Models.CardList>;
     if (!callback) {
       return this.searchWithHttpOperationResponse(q, options).then((operationRes: msRest.HttpOperationResponse) => {
-        return Promise.resolve(operationRes.bodyAsJson as Models.CardList);
+        return Promise.resolve(operationRes.parsedBody as Models.CardList);
       }).catch((err: Error) => {
         return Promise.reject(err);
       });
@@ -1049,7 +1049,7 @@ export class Cards {
         if (err) {
           return cb(err);
         }
-        let result = data.bodyAsJson as Models.CardList;
+        let result = data.parsedBody as Models.CardList;
         return cb(err, result, data.request, data.response);
       });
     }
@@ -1083,7 +1083,7 @@ export class Cards {
     let cb = callback as msRest.ServiceCallback<Models.Card>;
     if (!callback) {
       return this.getNamedWithHttpOperationResponse(options).then((operationRes: msRest.HttpOperationResponse) => {
-        return Promise.resolve(operationRes.bodyAsJson as Models.Card);
+        return Promise.resolve(operationRes.parsedBody as Models.Card);
       }).catch((err: Error) => {
         return Promise.reject(err);
       });
@@ -1092,7 +1092,7 @@ export class Cards {
         if (err) {
           return cb(err);
         }
-        let result = data.bodyAsJson as Models.Card;
+        let result = data.parsedBody as Models.Card;
         return cb(err, result, data.request, data.response);
       });
     }
@@ -1128,7 +1128,7 @@ export class Cards {
     let cb = callback as msRest.ServiceCallback<Models.Catalog>;
     if (!callback) {
       return this.autocompleteWithHttpOperationResponse(q, options).then((operationRes: msRest.HttpOperationResponse) => {
-        return Promise.resolve(operationRes.bodyAsJson as Models.Catalog);
+        return Promise.resolve(operationRes.parsedBody as Models.Catalog);
       }).catch((err: Error) => {
         return Promise.reject(err);
       });
@@ -1137,7 +1137,7 @@ export class Cards {
         if (err) {
           return cb(err);
         }
-        let result = data.bodyAsJson as Models.Catalog;
+        let result = data.parsedBody as Models.Catalog;
         return cb(err, result, data.request, data.response);
       });
     }
@@ -1171,7 +1171,7 @@ export class Cards {
     let cb = callback as msRest.ServiceCallback<Models.Card>;
     if (!callback) {
       return this.getRandomWithHttpOperationResponse(options).then((operationRes: msRest.HttpOperationResponse) => {
-        return Promise.resolve(operationRes.bodyAsJson as Models.Card);
+        return Promise.resolve(operationRes.parsedBody as Models.Card);
       }).catch((err: Error) => {
         return Promise.reject(err);
       });
@@ -1180,7 +1180,7 @@ export class Cards {
         if (err) {
           return cb(err);
         }
-        let result = data.bodyAsJson as Models.Card;
+        let result = data.parsedBody as Models.Card;
         return cb(err, result, data.request, data.response);
       });
     }
@@ -1216,7 +1216,7 @@ export class Cards {
     let cb = callback as msRest.ServiceCallback<Models.Card>;
     if (!callback) {
       return this.getByMultiverseIdWithHttpOperationResponse(id, options).then((operationRes: msRest.HttpOperationResponse) => {
-        return Promise.resolve(operationRes.bodyAsJson as Models.Card);
+        return Promise.resolve(operationRes.parsedBody as Models.Card);
       }).catch((err: Error) => {
         return Promise.reject(err);
       });
@@ -1225,7 +1225,7 @@ export class Cards {
         if (err) {
           return cb(err);
         }
-        let result = data.bodyAsJson as Models.Card;
+        let result = data.parsedBody as Models.Card;
         return cb(err, result, data.request, data.response);
       });
     }
@@ -1261,7 +1261,7 @@ export class Cards {
     let cb = callback as msRest.ServiceCallback<Models.Card>;
     if (!callback) {
       return this.getByMtgoIdWithHttpOperationResponse(id, options).then((operationRes: msRest.HttpOperationResponse) => {
-        return Promise.resolve(operationRes.bodyAsJson as Models.Card);
+        return Promise.resolve(operationRes.parsedBody as Models.Card);
       }).catch((err: Error) => {
         return Promise.reject(err);
       });
@@ -1270,7 +1270,7 @@ export class Cards {
         if (err) {
           return cb(err);
         }
-        let result = data.bodyAsJson as Models.Card;
+        let result = data.parsedBody as Models.Card;
         return cb(err, result, data.request, data.response);
       });
     }
@@ -1308,7 +1308,7 @@ export class Cards {
     let cb = callback as msRest.ServiceCallback<Models.Card>;
     if (!callback) {
       return this.getByCodeByNumberWithHttpOperationResponse(code, number, options).then((operationRes: msRest.HttpOperationResponse) => {
-        return Promise.resolve(operationRes.bodyAsJson as Models.Card);
+        return Promise.resolve(operationRes.parsedBody as Models.Card);
       }).catch((err: Error) => {
         return Promise.reject(err);
       });
@@ -1317,7 +1317,7 @@ export class Cards {
         if (err) {
           return cb(err);
         }
-        let result = data.bodyAsJson as Models.Card;
+        let result = data.parsedBody as Models.Card;
         return cb(err, result, data.request, data.response);
       });
     }
@@ -1353,7 +1353,7 @@ export class Cards {
     let cb = callback as msRest.ServiceCallback<Models.Card>;
     if (!callback) {
       return this.getByIdWithHttpOperationResponse(id, options).then((operationRes: msRest.HttpOperationResponse) => {
-        return Promise.resolve(operationRes.bodyAsJson as Models.Card);
+        return Promise.resolve(operationRes.parsedBody as Models.Card);
       }).catch((err: Error) => {
         return Promise.reject(err);
       });
@@ -1362,7 +1362,7 @@ export class Cards {
         if (err) {
           return cb(err);
         }
-        let result = data.bodyAsJson as Models.Card;
+        let result = data.parsedBody as Models.Card;
         return cb(err, result, data.request, data.response);
       });
     }

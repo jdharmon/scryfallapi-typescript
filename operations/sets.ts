@@ -63,7 +63,7 @@ export class Sets {
         error.statusCode = response.status;
         error.request = msRest.stripRequest(httpRequest);
         error.response = msRest.stripResponse(response);
-        let parsedErrorResponse = operationRes.bodyAsJson as { [key: string]: any };
+        let parsedErrorResponse = operationRes.parsedBody as { [key: string]: any };
         try {
           if (parsedErrorResponse) {
             let internalError = null;
@@ -84,11 +84,11 @@ export class Sets {
       }
       // Deserialize Response
       if (statusCode === 200) {
-        let parsedResponse = operationRes.bodyAsJson as { [key: string]: any };
+        let parsedResponse = operationRes.parsedBody as { [key: string]: any };
         try {
           if (parsedResponse !== null && parsedResponse !== undefined) {
             let resultMapper = Mappers.SetList;
-            operationRes.bodyAsJson = client.serializer.deserialize(resultMapper, parsedResponse, 'operationRes.bodyAsJson');
+            operationRes.parsedBody = client.serializer.deserialize(resultMapper, parsedResponse, 'operationRes.parsedBody');
           }
         } catch (error) {
           let deserializationError = new msRest.RestError(`Error ${error} occurred in deserializing the responseBody - ${operationRes.bodyAsText}`);
@@ -157,7 +157,7 @@ export class Sets {
         error.statusCode = response.status;
         error.request = msRest.stripRequest(httpRequest);
         error.response = msRest.stripResponse(response);
-        let parsedErrorResponse = operationRes.bodyAsJson as { [key: string]: any };
+        let parsedErrorResponse = operationRes.parsedBody as { [key: string]: any };
         try {
           if (parsedErrorResponse) {
             let internalError = null;
@@ -178,11 +178,11 @@ export class Sets {
       }
       // Deserialize Response
       if (statusCode === 200) {
-        let parsedResponse = operationRes.bodyAsJson as { [key: string]: any };
+        let parsedResponse = operationRes.parsedBody as { [key: string]: any };
         try {
           if (parsedResponse !== null && parsedResponse !== undefined) {
             let resultMapper = Mappers.Set;
-            operationRes.bodyAsJson = client.serializer.deserialize(resultMapper, parsedResponse, 'operationRes.bodyAsJson');
+            operationRes.parsedBody = client.serializer.deserialize(resultMapper, parsedResponse, 'operationRes.parsedBody');
           }
         } catch (error) {
           let deserializationError = new msRest.RestError(`Error ${error} occurred in deserializing the responseBody - ${operationRes.bodyAsText}`);
@@ -227,7 +227,7 @@ export class Sets {
     let cb = callback as msRest.ServiceCallback<Models.SetList>;
     if (!callback) {
       return this.getAllWithHttpOperationResponse(options).then((operationRes: msRest.HttpOperationResponse) => {
-        return Promise.resolve(operationRes.bodyAsJson as Models.SetList);
+        return Promise.resolve(operationRes.parsedBody as Models.SetList);
       }).catch((err: Error) => {
         return Promise.reject(err);
       });
@@ -236,7 +236,7 @@ export class Sets {
         if (err) {
           return cb(err);
         }
-        let result = data.bodyAsJson as Models.SetList;
+        let result = data.parsedBody as Models.SetList;
         return cb(err, result, data.request, data.response);
       });
     }
@@ -272,7 +272,7 @@ export class Sets {
     let cb = callback as msRest.ServiceCallback<Models.Set>;
     if (!callback) {
       return this.getByCodeWithHttpOperationResponse(code, options).then((operationRes: msRest.HttpOperationResponse) => {
-        return Promise.resolve(operationRes.bodyAsJson as Models.Set);
+        return Promise.resolve(operationRes.parsedBody as Models.Set);
       }).catch((err: Error) => {
         return Promise.reject(err);
       });
@@ -281,7 +281,7 @@ export class Sets {
         if (err) {
           return cb(err);
         }
-        let result = data.bodyAsJson as Models.Set;
+        let result = data.parsedBody as Models.Set;
         return cb(err, result, data.request, data.response);
       });
     }
