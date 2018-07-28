@@ -6,31 +6,27 @@
 
 
 export const RelatedCards = {
-  required: false,
-  serializedName: 'related_cards',
+  serializedName: "related_cards",
   type: {
-    name: 'Composite',
-    className: 'RelatedCards',
+    name: "Composite",
+    className: "RelatedCards",
     modelProperties: {
       id: {
-        required: false,
-        serializedName: 'id',
+        serializedName: "id",
         type: {
-          name: 'String'
+          name: "Uuid"
         }
       },
       name: {
-        required: false,
-        serializedName: 'name',
+        serializedName: "name",
         type: {
-          name: 'String'
+          name: "String"
         }
       },
       uri: {
-        required: false,
-        serializedName: 'uri',
+        serializedName: "uri",
         type: {
-          name: 'String'
+          name: "String"
         }
       }
     }
@@ -38,52 +34,45 @@ export const RelatedCards = {
 };
 
 export const ImageUri = {
-  required: false,
-  serializedName: 'image_uri',
+  serializedName: "image_uri",
   type: {
-    name: 'Composite',
-    className: 'ImageUri',
+    name: "Composite",
+    className: "ImageUri",
     modelProperties: {
       small: {
-        required: false,
-        serializedName: 'small',
+        serializedName: "small",
         type: {
-          name: 'String'
+          name: "String"
         }
       },
       normal: {
-        required: false,
-        serializedName: 'normal',
+        serializedName: "normal",
         type: {
-          name: 'String'
+          name: "String"
         }
       },
       large: {
-        required: false,
-        serializedName: 'large',
+        serializedName: "large",
         type: {
-          name: 'String'
+          name: "String"
         }
       },
       png: {
-        required: false,
-        serializedName: 'png',
+        serializedName: "png",
         type: {
-          name: 'String'
+          name: "String"
         }
       },
       artCrop: {
-        required: false,
-        serializedName: 'art_crop',
+        serializedName: "art_crop",
         type: {
-          name: 'String'
+          name: "String"
         }
       },
       borderCrop: {
-        required: false,
-        serializedName: 'border_crop',
+        serializedName: "border_crop",
         type: {
-          name: 'String'
+          name: "String"
         }
       }
     }
@@ -91,104 +80,108 @@ export const ImageUri = {
 };
 
 export const CardFace = {
-  required: false,
-  serializedName: 'card_face',
+  serializedName: "card_face",
   type: {
-    name: 'Composite',
-    className: 'CardFace',
+    name: "Composite",
+    className: "CardFace",
     modelProperties: {
       name: {
-        required: false,
-        serializedName: 'name',
+        serializedName: "name",
         type: {
-          name: 'String'
+          name: "String"
         }
       },
       typeLine: {
-        required: false,
-        serializedName: 'type_line',
+        serializedName: "type_line",
         type: {
-          name: 'String'
+          name: "String"
         }
       },
       oracleText: {
-        required: false,
-        serializedName: 'oracle_text',
+        serializedName: "oracle_text",
         type: {
-          name: 'String'
+          name: "String"
         }
       },
       manaCost: {
-        required: false,
-        serializedName: 'mana_cost',
+        serializedName: "mana_cost",
         type: {
-          name: 'String'
+          name: "String"
         }
       },
       colors: {
-        required: false,
-        serializedName: 'colors',
+        serializedName: "colors",
         type: {
-          name: 'Sequence',
+          name: "Sequence",
           element: {
-              required: false,
-              serializedName: 'ColorsElementType',
-              type: {
-                name: 'Enum',
-                allowedValues: [ 'W', 'U', 'B', 'R', 'G' ]
-              }
+            serializedName: "ColorsElementType",
+            type: {
+              name: "Enum",
+              allowedValues: [
+                "W",
+                "U",
+                "B",
+                "R",
+                "G"
+              ]
+            }
           }
         }
       },
       colorIndicator: {
-        required: false,
-        serializedName: 'color_indicator',
+        serializedName: "color_indicator",
         type: {
-          name: 'Enum',
-          allowedValues: [ 'W', 'U', 'B', 'R', 'G' ]
+          name: "Sequence",
+          element: {
+            serializedName: "ColorsElementType",
+            type: {
+              name: "Enum",
+              allowedValues: [
+                "W",
+                "U",
+                "B",
+                "R",
+                "G"
+              ]
+            }
+          }
         }
       },
       power: {
-        required: false,
-        serializedName: 'power',
+        serializedName: "power",
         type: {
-          name: 'String'
+          name: "String"
         }
       },
       toughness: {
-        required: false,
-        serializedName: 'toughness',
+        serializedName: "toughness",
         type: {
-          name: 'String'
+          name: "String"
         }
       },
       loyalty: {
-        required: false,
-        serializedName: 'loyalty',
+        serializedName: "loyalty",
         type: {
-          name: 'String'
+          name: "String"
         }
       },
       flavorText: {
-        required: false,
-        serializedName: 'flavor_text',
+        serializedName: "flavor_text",
         type: {
-          name: 'String'
+          name: "String"
         }
       },
       illustrationId: {
-        required: false,
-        serializedName: 'illustration_id',
+        serializedName: "illustration_id",
         type: {
-          name: 'String'
+          name: "Uuid"
         }
       },
       imageUris: {
-        required: false,
-        serializedName: 'image_uris',
+        serializedName: "image_uris",
         type: {
-          name: 'Composite',
-          className: 'ImageUri'
+          name: "Composite",
+          className: "ImageUri"
         }
       }
     }
@@ -196,106 +189,153 @@ export const CardFace = {
 };
 
 export const Legality = {
-  required: false,
-  serializedName: 'legality',
+  serializedName: "legality",
   type: {
-    name: 'Composite',
-    className: 'Legality',
+    name: "Composite",
+    className: "Legality",
     modelProperties: {
       standard: {
-        required: false,
-        serializedName: 'standard',
+        serializedName: "standard",
         type: {
-          name: 'Enum',
-          allowedValues: [ 'legal', 'not_legal' ]
+          name: "Enum",
+          allowedValues: [
+            "legal",
+            "not_legal",
+            "restricted",
+            "banned"
+          ]
         }
       },
       future: {
-        required: false,
-        serializedName: 'future',
+        serializedName: "future",
         type: {
-          name: 'Enum',
-          allowedValues: [ 'legal', 'not_legal' ]
+          name: "Enum",
+          allowedValues: [
+            "legal",
+            "not_legal",
+            "restricted",
+            "banned"
+          ]
         }
       },
       frontier: {
-        required: false,
-        serializedName: 'frontier',
+        serializedName: "frontier",
         type: {
-          name: 'Enum',
-          allowedValues: [ 'legal', 'not_legal' ]
+          name: "Enum",
+          allowedValues: [
+            "legal",
+            "not_legal",
+            "restricted",
+            "banned"
+          ]
         }
       },
       modern: {
-        required: false,
-        serializedName: 'modern',
+        serializedName: "modern",
         type: {
-          name: 'Enum',
-          allowedValues: [ 'legal', 'not_legal' ]
+          name: "Enum",
+          allowedValues: [
+            "legal",
+            "not_legal",
+            "restricted",
+            "banned"
+          ]
         }
       },
       legacy: {
-        required: false,
-        serializedName: 'legacy',
+        serializedName: "legacy",
         type: {
-          name: 'Enum',
-          allowedValues: [ 'legal', 'not_legal' ]
+          name: "Enum",
+          allowedValues: [
+            "legal",
+            "not_legal",
+            "restricted",
+            "banned"
+          ]
         }
       },
       pauper: {
-        required: false,
-        serializedName: 'pauper',
+        serializedName: "pauper",
         type: {
-          name: 'Enum',
-          allowedValues: [ 'legal', 'not_legal' ]
+          name: "Enum",
+          allowedValues: [
+            "legal",
+            "not_legal",
+            "restricted",
+            "banned"
+          ]
         }
       },
       vintage: {
-        required: false,
-        serializedName: 'vintage',
+        serializedName: "vintage",
         type: {
-          name: 'Enum',
-          allowedValues: [ 'legal', 'not_legal' ]
+          name: "Enum",
+          allowedValues: [
+            "legal",
+            "not_legal",
+            "restricted",
+            "banned"
+          ]
         }
       },
       penny: {
-        required: false,
-        serializedName: 'penny',
+        serializedName: "penny",
         type: {
-          name: 'Enum',
-          allowedValues: [ 'legal', 'not_legal' ]
+          name: "Enum",
+          allowedValues: [
+            "legal",
+            "not_legal",
+            "restricted",
+            "banned"
+          ]
         }
       },
       commander: {
-        required: false,
-        serializedName: 'commander',
+        serializedName: "commander",
         type: {
-          name: 'Enum',
-          allowedValues: [ 'legal', 'not_legal' ]
+          name: "Enum",
+          allowedValues: [
+            "legal",
+            "not_legal",
+            "restricted",
+            "banned"
+          ]
         }
       },
       onevOne: {
-        required: false,
-        serializedName: '1v1',
+        serializedName: "1v1",
         type: {
-          name: 'Enum',
-          allowedValues: [ 'legal', 'not_legal' ]
+          name: "Enum",
+          allowedValues: [
+            "legal",
+            "not_legal",
+            "restricted",
+            "banned"
+          ]
         }
       },
       duel: {
-        required: false,
-        serializedName: 'duel',
+        serializedName: "duel",
         type: {
-          name: 'Enum',
-          allowedValues: [ 'legal', 'not_legal' ]
+          name: "Enum",
+          allowedValues: [
+            "legal",
+            "not_legal",
+            "restricted",
+            "banned"
+          ]
         }
       },
       brawl: {
-        required: false,
-        serializedName: 'brawl',
+        serializedName: "brawl",
         type: {
-          name: 'Enum',
-          allowedValues: [ 'legal', 'not_legal' ]
+          name: "Enum",
+          allowedValues: [
+            "legal",
+            "not_legal",
+            "restricted",
+            "banned"
+          ]
         }
       }
     }
@@ -303,432 +343,429 @@ export const Legality = {
 };
 
 export const Card = {
-  required: false,
-  serializedName: 'card',
+  serializedName: "card",
   type: {
-    name: 'Composite',
-    className: 'Card',
+    name: "Composite",
+    className: "Card",
     modelProperties: {
       id: {
-        required: false,
-        serializedName: 'id',
+        serializedName: "id",
         type: {
-          name: 'String'
+          name: "Uuid"
         }
       },
       oracleId: {
-        required: false,
-        serializedName: 'oracle_id',
+        serializedName: "oracle_id",
         type: {
-          name: 'String'
+          name: "Uuid"
         }
       },
       multiverseIds: {
-        required: false,
-        serializedName: 'multiverse_ids',
+        serializedName: "multiverse_ids",
         type: {
-          name: 'Sequence',
+          name: "Sequence",
           element: {
-              required: false,
-              serializedName: 'numberElementType',
-              type: {
-                name: 'Number'
-              }
+            serializedName: "numberElementType",
+            type: {
+              name: "Number"
+            }
           }
         }
       },
       mtgoId: {
-        required: false,
-        serializedName: 'mtgo_id',
+        serializedName: "mtgo_id",
         type: {
-          name: 'Number'
+          name: "Number"
+        }
+      },
+      arenaId: {
+        serializedName: "arena_id",
+        type: {
+          name: "Number"
         }
       },
       mtgoFoilId: {
-        required: false,
-        serializedName: 'mtgo_foil_id',
+        serializedName: "mtgo_foil_id",
         type: {
-          name: 'Number'
+          name: "Number"
         }
       },
       uri: {
-        required: false,
-        serializedName: 'uri',
+        serializedName: "uri",
         type: {
-          name: 'String'
+          name: "String"
         }
       },
       scryfallUri: {
-        required: false,
-        serializedName: 'scryfall_uri',
+        serializedName: "scryfall_uri",
         type: {
-          name: 'String'
+          name: "String"
         }
       },
       printsSearchUri: {
-        required: false,
-        serializedName: 'prints_search_uri',
+        serializedName: "prints_search_uri",
         type: {
-          name: 'String'
+          name: "String"
         }
       },
       rulingsUri: {
-        required: false,
-        serializedName: 'rulings_uri',
+        serializedName: "rulings_uri",
         type: {
-          name: 'String'
+          name: "String"
         }
       },
       name: {
-        required: false,
-        serializedName: 'name',
+        serializedName: "name",
         type: {
-          name: 'String'
+          name: "String"
         }
       },
       layout: {
-        required: false,
-        serializedName: 'layout',
+        serializedName: "layout",
         type: {
-          name: 'Enum',
-          allowedValues: [ 'normal', 'split', 'transform', 'meld', 'leveler', 'saga', 'planar', 'scheme', 'vanguard', 'token', 'double_faced_token', 'emblem', 'augment', 'host' ]
+          name: "Enum",
+          allowedValues: [
+            "normal",
+            "split",
+            "flip",
+            "transform",
+            "meld",
+            "leveler",
+            "saga",
+            "planar",
+            "scheme",
+            "vanguard",
+            "token",
+            "double_faced_token",
+            "emblem",
+            "augment",
+            "host"
+          ]
         }
       },
       cmc: {
-        required: false,
-        serializedName: 'cmc',
+        serializedName: "cmc",
         type: {
-          name: 'Number'
+          name: "Number"
         }
       },
       typeLine: {
-        required: false,
-        serializedName: 'type_line',
+        serializedName: "type_line",
         type: {
-          name: 'String'
+          name: "String"
         }
       },
       oracleText: {
-        required: false,
-        serializedName: 'oracle_text',
+        serializedName: "oracle_text",
         type: {
-          name: 'String'
+          name: "String"
         }
       },
       manaCost: {
-        required: false,
-        serializedName: 'mana_cost',
+        serializedName: "mana_cost",
         type: {
-          name: 'String'
+          name: "String"
         }
       },
       power: {
-        required: false,
-        serializedName: 'power',
+        serializedName: "power",
         type: {
-          name: 'String'
+          name: "String"
         }
       },
       toughness: {
-        required: false,
-        serializedName: 'toughness',
+        serializedName: "toughness",
         type: {
-          name: 'String'
+          name: "String"
         }
       },
       loyalty: {
-        required: false,
-        serializedName: 'loyalty',
+        serializedName: "loyalty",
         type: {
-          name: 'String'
+          name: "String"
         }
       },
       lifeModifier: {
-        required: false,
-        serializedName: 'life_modifier',
+        serializedName: "life_modifier",
         type: {
-          name: 'String'
+          name: "String"
         }
       },
       handModifier: {
-        required: false,
-        serializedName: 'hand_modifier',
+        serializedName: "hand_modifier",
         type: {
-          name: 'String'
+          name: "String"
         }
       },
       colors: {
-        required: false,
-        serializedName: 'colors',
+        serializedName: "colors",
         type: {
-          name: 'Sequence',
+          name: "Sequence",
           element: {
-              required: false,
-              serializedName: 'ColorsElementType',
-              type: {
-                name: 'Enum',
-                allowedValues: [ 'W', 'U', 'B', 'R', 'G' ]
-              }
+            serializedName: "ColorsElementType",
+            type: {
+              name: "Enum",
+              allowedValues: [
+                "W",
+                "U",
+                "B",
+                "R",
+                "G"
+              ]
+            }
           }
         }
       },
       colorIndicator: {
-        required: false,
-        serializedName: 'color_indicator',
+        serializedName: "color_indicator",
         type: {
-          name: 'Sequence',
+          name: "Sequence",
           element: {
-              required: false,
-              serializedName: 'ColorsElementType',
-              type: {
-                name: 'Enum',
-                allowedValues: [ 'W', 'U', 'B', 'R', 'G' ]
-              }
+            serializedName: "ColorsElementType",
+            type: {
+              name: "Enum",
+              allowedValues: [
+                "W",
+                "U",
+                "B",
+                "R",
+                "G"
+              ]
+            }
           }
         }
       },
       colorIdentity: {
-        required: false,
-        serializedName: 'color_identity',
+        serializedName: "color_identity",
         type: {
-          name: 'Sequence',
+          name: "Sequence",
           element: {
-              required: false,
-              serializedName: 'ColorsElementType',
-              type: {
-                name: 'Enum',
-                allowedValues: [ 'W', 'U', 'B', 'R', 'G' ]
-              }
+            serializedName: "ColorsElementType",
+            type: {
+              name: "Enum",
+              allowedValues: [
+                "W",
+                "U",
+                "B",
+                "R",
+                "G"
+              ]
+            }
           }
         }
       },
       allParts: {
-        required: false,
-        serializedName: 'all_parts',
+        serializedName: "all_parts",
         type: {
-          name: 'Composite',
-          className: 'RelatedCards'
+          name: "Sequence",
+          element: {
+            serializedName: "RelatedCardsElementType",
+            type: {
+              name: "Composite",
+              className: "RelatedCards"
+            }
+          }
         }
       },
       cardFaces: {
-        required: false,
-        serializedName: 'card_faces',
+        serializedName: "card_faces",
         type: {
-          name: 'Sequence',
+          name: "Sequence",
           element: {
-              required: false,
-              serializedName: 'CardFaceElementType',
-              type: {
-                name: 'Composite',
-                className: 'CardFace'
-              }
+            serializedName: "CardFaceElementType",
+            type: {
+              name: "Composite",
+              className: "CardFace"
+            }
           }
         }
       },
       legalities: {
-        required: false,
-        serializedName: 'legalities',
+        serializedName: "legalities",
         type: {
-          name: 'Composite',
-          className: 'Legality'
+          name: "Composite",
+          className: "Legality"
         }
       },
       reserved: {
-        required: false,
-        serializedName: 'reserved',
+        serializedName: "reserved",
         type: {
-          name: 'Boolean'
+          name: "Boolean"
         }
       },
       edhrecRank: {
-        required: false,
-        serializedName: 'edhrec_rank',
+        serializedName: "edhrec_rank",
         type: {
-          name: 'Number'
+          name: "Number"
         }
       },
       set: {
-        required: false,
-        serializedName: 'set',
+        serializedName: "set",
         type: {
-          name: 'String'
+          name: "String"
         }
       },
       setName: {
-        required: false,
-        serializedName: 'set_name',
+        serializedName: "set_name",
         type: {
-          name: 'String'
+          name: "String"
         }
       },
       collectorNumber: {
-        required: false,
-        serializedName: 'collector_number',
+        serializedName: "collector_number",
         type: {
-          name: 'String'
+          name: "String"
         }
       },
       setSearchUri: {
-        required: false,
-        serializedName: 'set_search_uri',
+        serializedName: "set_search_uri",
         type: {
-          name: 'String'
+          name: "String"
         }
       },
       scryfallSetUri: {
-        required: false,
-        serializedName: 'scryfall_set_uri',
+        serializedName: "scryfall_set_uri",
         type: {
-          name: 'String'
+          name: "String"
         }
       },
       imageUris: {
-        required: false,
-        serializedName: 'image_uris',
+        serializedName: "image_uris",
         type: {
-          name: 'Composite',
-          className: 'ImageUri'
+          name: "Composite",
+          className: "ImageUri"
         }
       },
       highresImage: {
-        required: false,
-        serializedName: 'highres_image',
+        serializedName: "highres_image",
         type: {
-          name: 'Boolean'
+          name: "Boolean"
         }
       },
       reprint: {
-        required: false,
-        serializedName: 'reprint',
+        serializedName: "reprint",
         type: {
-          name: 'Boolean'
+          name: "Boolean"
         }
       },
       digital: {
-        required: false,
-        serializedName: 'digital',
+        serializedName: "digital",
         type: {
-          name: 'Boolean'
+          name: "Boolean"
         }
       },
       rarity: {
-        required: false,
-        serializedName: 'rarity',
+        serializedName: "rarity",
         type: {
-          name: 'Enum',
-          allowedValues: [ 'common', 'uncommon', 'rare', 'mythic' ]
+          name: "Enum",
+          allowedValues: [
+            "common",
+            "uncommon",
+            "rare",
+            "mythic"
+          ]
         }
       },
       flavorText: {
-        required: false,
-        serializedName: 'flavor_text',
+        serializedName: "flavor_text",
         type: {
-          name: 'String'
+          name: "String"
         }
       },
       artist: {
-        required: false,
-        serializedName: 'artist',
+        serializedName: "artist",
         type: {
-          name: 'String'
+          name: "String"
         }
       },
       illustrationId: {
-        required: false,
-        serializedName: 'illustration_id',
+        serializedName: "illustration_id",
         type: {
-          name: 'String'
+          name: "Uuid"
         }
       },
       frame: {
-        required: false,
-        serializedName: 'frame',
+        serializedName: "frame",
         type: {
-          name: 'String'
+          name: "String"
         }
       },
       fullArt: {
-        required: false,
-        serializedName: 'full_art',
+        serializedName: "full_art",
         type: {
-          name: 'Boolean'
+          name: "Boolean"
         }
       },
       watermark: {
-        required: false,
-        serializedName: 'watermark',
+        serializedName: "watermark",
         type: {
-          name: 'String'
+          name: "String"
         }
       },
       borderColor: {
-        required: false,
-        serializedName: 'border_color',
+        serializedName: "border_color",
         type: {
-          name: 'Enum',
-          allowedValues: [ 'black', 'borderless', 'gold', 'silver', 'white' ]
+          name: "Enum",
+          allowedValues: [
+            "black",
+            "borderless",
+            "gold",
+            "silver",
+            "white"
+          ]
         }
       },
       storySpotlightNumber: {
-        required: false,
-        serializedName: 'story_spotlight_number',
+        serializedName: "story_spotlight_number",
         type: {
-          name: 'Number'
+          name: "Number"
         }
       },
       storySpotlightUri: {
-        required: false,
-        serializedName: 'story_spotlight_uri',
+        serializedName: "story_spotlight_uri",
         type: {
-          name: 'String'
+          name: "String"
         }
       },
       timeshifted: {
-        required: false,
-        serializedName: 'timeshifted',
+        serializedName: "timeshifted",
         type: {
-          name: 'Boolean'
+          name: "Boolean"
         }
       },
       colorshifted: {
-        required: false,
-        serializedName: 'colorshifted',
+        serializedName: "colorshifted",
         type: {
-          name: 'Boolean'
+          name: "Boolean"
         }
       },
       futureshifted: {
-        required: false,
-        serializedName: 'futureshifted',
+        serializedName: "futureshifted",
         type: {
-          name: 'Boolean'
+          name: "Boolean"
         }
       },
       purchaseUris: {
-        required: false,
-        serializedName: 'purchase_uris',
+        serializedName: "purchase_uris",
         type: {
-          name: 'Dictionary',
+          name: "Dictionary",
           value: {
-              required: false,
-              serializedName: 'stringElementType',
-              type: {
-                name: 'String'
-              }
+            serializedName: "stringElementType",
+            type: {
+              name: "String"
+            }
           }
         }
       },
       relatedUris: {
-        required: false,
-        serializedName: 'related_uris',
+        serializedName: "related_uris",
         type: {
-          name: 'Dictionary',
+          name: "Dictionary",
           value: {
-              required: false,
-              serializedName: 'stringElementType',
-              type: {
-                name: 'String'
-              }
+            serializedName: "stringElementType",
+            type: {
+              name: "String"
+            }
           }
         }
       }
@@ -737,30 +774,26 @@ export const Card = {
 };
 
 export const Catalog = {
-  required: false,
-  serializedName: 'catalog',
+  serializedName: "catalog",
   type: {
-    name: 'Composite',
-    className: 'Catalog',
+    name: "Composite",
+    className: "Catalog",
     modelProperties: {
       totalItems: {
-        required: false,
-        serializedName: 'total_items',
+        serializedName: "total_items",
         type: {
-          name: 'Number'
+          name: "Number"
         }
       },
       data: {
-        required: false,
-        serializedName: 'data',
+        serializedName: "data",
         type: {
-          name: 'Sequence',
+          name: "Sequence",
           element: {
-              required: false,
-              serializedName: 'stringElementType',
-              type: {
-                name: 'String'
-              }
+            serializedName: "stringElementType",
+            type: {
+              name: "String"
+            }
           }
         }
       }
@@ -769,102 +802,109 @@ export const Catalog = {
 };
 
 export const Set = {
-  required: false,
-  serializedName: 'set',
+  serializedName: "set",
   type: {
-    name: 'Composite',
-    className: 'Set',
+    name: "Composite",
+    className: "Set",
     modelProperties: {
       code: {
-        required: false,
-        serializedName: 'code',
+        serializedName: "code",
         type: {
-          name: 'String'
+          name: "String"
         }
       },
       mtgoCode: {
-        required: false,
-        serializedName: 'mtgo_code',
+        serializedName: "mtgo_code",
         type: {
-          name: 'String'
+          name: "String"
         }
       },
       name: {
-        required: false,
-        serializedName: 'name',
+        serializedName: "name",
         type: {
-          name: 'String'
+          name: "String"
         }
       },
       setType: {
-        required: false,
-        serializedName: 'set_type',
+        serializedName: "set_type",
         type: {
-          name: 'Enum',
-          allowedValues: [ 'core', 'expansion', 'masters', 'masterpiece', 'from_the_vault', 'spellbook', 'premium_deck', 'duel_deck', 'commander', 'planechase', 'conspiracy', 'archenemy', 'vanguard', 'funny', 'starter', 'box', 'promo', 'token', 'memorabilia', 'treasure_chest' ]
+          name: "Enum",
+          allowedValues: [
+            "core",
+            "expansion",
+            "masters",
+            "masterpiece",
+            "from_the_vault",
+            "spellbook",
+            "premium_deck",
+            "duel_deck",
+            "commander",
+            "planechase",
+            "conspiracy",
+            "archenemy",
+            "vanguard",
+            "funny",
+            "starter",
+            "box",
+            "promo",
+            "token",
+            "memorabilia",
+            "treasure_chest"
+          ]
         }
       },
       releasedAt: {
-        required: false,
-        serializedName: 'released_at',
+        serializedName: "released_at",
         type: {
-          name: 'Date'
+          name: "Date"
         }
       },
       blockCode: {
-        required: false,
-        serializedName: 'block_code',
+        serializedName: "block_code",
         type: {
-          name: 'String'
+          name: "String"
         }
       },
       block: {
-        required: false,
-        serializedName: 'block',
+        serializedName: "block",
         type: {
-          name: 'String'
+          name: "String"
         }
       },
       parentSetCode: {
-        required: false,
-        serializedName: 'parent_set_code',
+        serializedName: "parent_set_code",
         type: {
-          name: 'String'
+          name: "String"
         }
       },
       cardCount: {
-        required: false,
-        serializedName: 'card_count',
+        serializedName: "card_count",
         type: {
-          name: 'Number'
+          name: "Number"
         }
       },
       digital: {
-        required: false,
-        serializedName: 'digital',
+        serializedName: "digital",
         type: {
-          name: 'Boolean'
+          name: "Boolean"
         }
       },
       foil: {
-        required: false,
-        serializedName: 'foil',
+        serializedName: "foil",
         type: {
-          name: 'Boolean'
+          name: "Boolean"
         }
       },
       iconSvgUri: {
-        required: false,
-        serializedName: 'icon_svg_uri',
+        serializedName: "icon_svg_uri",
         type: {
-          name: 'String'
+          name: "String"
         }
       },
       searchUri: {
-        required: false,
-        serializedName: 'search_uri',
+        serializedName: "search_uri",
         type: {
-          name: 'String'
+          name: "String"
         }
       }
     }
@@ -872,31 +912,27 @@ export const Set = {
 };
 
 export const Ruling = {
-  required: false,
-  serializedName: 'ruling',
+  serializedName: "ruling",
   type: {
-    name: 'Composite',
-    className: 'Ruling',
+    name: "Composite",
+    className: "Ruling",
     modelProperties: {
       source: {
-        required: false,
-        serializedName: 'source',
+        serializedName: "source",
         type: {
-          name: 'String'
+          name: "String"
         }
       },
       publishedAt: {
-        required: false,
-        serializedName: 'published_at',
+        serializedName: "published_at",
         type: {
-          name: 'Date'
+          name: "Date"
         }
       },
       comment: {
-        required: false,
-        serializedName: 'comment',
+        serializedName: "comment",
         type: {
-          name: 'String'
+          name: "String"
         }
       }
     }
@@ -904,74 +940,70 @@ export const Ruling = {
 };
 
 export const CardSymbol = {
-  required: false,
-  serializedName: 'card_symbol',
+  serializedName: "card_symbol",
   type: {
-    name: 'Composite',
-    className: 'CardSymbol',
+    name: "Composite",
+    className: "CardSymbol",
     modelProperties: {
       symbol: {
-        required: false,
-        serializedName: 'symbol',
+        serializedName: "symbol",
         type: {
-          name: 'String'
+          name: "String"
         }
       },
       looseVariant: {
-        required: false,
-        serializedName: 'loose_variant',
+        serializedName: "loose_variant",
         type: {
-          name: 'String'
+          name: "String"
         }
       },
       english: {
-        required: false,
-        serializedName: 'english',
+        serializedName: "english",
         type: {
-          name: 'String'
+          name: "String"
         }
       },
       transposable: {
-        required: false,
-        serializedName: 'transposable',
+        serializedName: "transposable",
         type: {
-          name: 'Boolean'
+          name: "Boolean"
         }
       },
       representsMana: {
-        required: false,
-        serializedName: 'represents_mana',
+        serializedName: "represents_mana",
         type: {
-          name: 'Boolean'
+          name: "Boolean"
         }
       },
       cmc: {
-        required: false,
-        serializedName: 'cmc',
+        serializedName: "cmc",
         type: {
-          name: 'Number'
+          name: "Number"
         }
       },
       appearsInManaCosts: {
-        required: false,
-        serializedName: 'appears_in_mana_costs',
+        serializedName: "appears_in_mana_costs",
         type: {
-          name: 'Boolean'
+          name: "Boolean"
         }
       },
       funny: {
-        required: false,
-        serializedName: 'funny',
+        serializedName: "funny",
         type: {
-          name: 'Boolean'
+          name: "Boolean"
         }
       },
       colors: {
-        required: false,
-        serializedName: 'colors',
+        serializedName: "colors",
         type: {
-          name: 'Enum',
-          allowedValues: [ 'W', 'U', 'B', 'R', 'G' ]
+          name: "Enum",
+          allowedValues: [
+            "W",
+            "U",
+            "B",
+            "R",
+            "G"
+          ]
         }
       }
     }
@@ -979,53 +1011,52 @@ export const CardSymbol = {
 };
 
 export const ManaCost = {
-  required: false,
-  serializedName: 'mana_cost',
+  serializedName: "mana_cost",
   type: {
-    name: 'Composite',
-    className: 'ManaCost',
+    name: "Composite",
+    className: "ManaCost",
     modelProperties: {
       cost: {
-        required: false,
-        serializedName: 'cost',
+        serializedName: "cost",
         type: {
-          name: 'String'
+          name: "String"
         }
       },
       cmc: {
-        required: false,
-        serializedName: 'cmc',
+        serializedName: "cmc",
         type: {
-          name: 'Number'
+          name: "Number"
         }
       },
       colors: {
-        required: false,
-        serializedName: 'colors',
+        serializedName: "colors",
         type: {
-          name: 'Enum',
-          allowedValues: [ 'W', 'U', 'B', 'R', 'G' ]
+          name: "Enum",
+          allowedValues: [
+            "W",
+            "U",
+            "B",
+            "R",
+            "G"
+          ]
         }
       },
       colorless: {
-        required: false,
-        serializedName: 'colorless',
+        serializedName: "colorless",
         type: {
-          name: 'Boolean'
+          name: "Boolean"
         }
       },
       monocolored: {
-        required: false,
-        serializedName: 'monocolored',
+        serializedName: "monocolored",
         type: {
-          name: 'Boolean'
+          name: "Boolean"
         }
       },
       multicolored: {
-        required: false,
-        serializedName: 'multicolored',
+        serializedName: "multicolored",
         type: {
-          name: 'Boolean'
+          name: "Boolean"
         }
       }
     }
@@ -1033,45 +1064,39 @@ export const ManaCost = {
 };
 
 export const CardList = {
-  required: false,
-  serializedName: 'card_list',
+  serializedName: "card_list",
   type: {
-    name: 'Composite',
-    className: 'CardList',
+    name: "Composite",
+    className: "CardList",
     modelProperties: {
       totalCards: {
-        required: false,
-        serializedName: 'total_cards',
+        serializedName: "total_cards",
         type: {
-          name: 'Number'
+          name: "Number"
         }
       },
       hasMore: {
-        required: false,
-        serializedName: 'has_more',
+        serializedName: "has_more",
         type: {
-          name: 'Boolean'
+          name: "Boolean"
         }
       },
       nextPage: {
-        required: false,
-        serializedName: 'next_page',
+        serializedName: "next_page",
         type: {
-          name: 'String'
+          name: "String"
         }
       },
       data: {
-        required: false,
-        serializedName: 'data',
+        serializedName: "data",
         type: {
-          name: 'Sequence',
+          name: "Sequence",
           element: {
-              required: false,
-              serializedName: 'CardElementType',
-              type: {
-                name: 'Composite',
-                className: 'Card'
-              }
+            serializedName: "CardElementType",
+            type: {
+              name: "Composite",
+              className: "Card"
+            }
           }
         }
       }
@@ -1080,24 +1105,21 @@ export const CardList = {
 };
 
 export const SetList = {
-  required: false,
-  serializedName: 'set_list',
+  serializedName: "set_list",
   type: {
-    name: 'Composite',
-    className: 'SetList',
+    name: "Composite",
+    className: "SetList",
     modelProperties: {
       data: {
-        required: false,
-        serializedName: 'data',
+        serializedName: "data",
         type: {
-          name: 'Sequence',
+          name: "Sequence",
           element: {
-              required: false,
-              serializedName: 'SetElementType',
-              type: {
-                name: 'Composite',
-                className: 'Set'
-              }
+            serializedName: "SetElementType",
+            type: {
+              name: "Composite",
+              className: "Set"
+            }
           }
         }
       }
@@ -1106,24 +1128,21 @@ export const SetList = {
 };
 
 export const RulingList = {
-  required: false,
-  serializedName: 'ruling_list',
+  serializedName: "ruling_list",
   type: {
-    name: 'Composite',
-    className: 'RulingList',
+    name: "Composite",
+    className: "RulingList",
     modelProperties: {
       data: {
-        required: false,
-        serializedName: 'data',
+        serializedName: "data",
         type: {
-          name: 'Sequence',
+          name: "Sequence",
           element: {
-              required: false,
-              serializedName: 'RulingElementType',
-              type: {
-                name: 'Composite',
-                className: 'Ruling'
-              }
+            serializedName: "RulingElementType",
+            type: {
+              name: "Composite",
+              className: "Ruling"
+            }
           }
         }
       }
@@ -1132,24 +1151,21 @@ export const RulingList = {
 };
 
 export const CardSymbolList = {
-  required: false,
-  serializedName: 'card_symbol_list',
+  serializedName: "card_symbol_list",
   type: {
-    name: 'Composite',
-    className: 'CardSymbolList',
+    name: "Composite",
+    className: "CardSymbolList",
     modelProperties: {
       data: {
-        required: false,
-        serializedName: 'data',
+        serializedName: "data",
         type: {
-          name: 'Sequence',
+          name: "Sequence",
           element: {
-              required: false,
-              serializedName: 'CardSymbolElementType',
-              type: {
-                name: 'Composite',
-                className: 'CardSymbol'
-              }
+            serializedName: "CardSymbolElementType",
+            type: {
+              name: "Composite",
+              className: "CardSymbol"
+            }
           }
         }
       }
@@ -1158,51 +1174,44 @@ export const CardSymbolList = {
 };
 
 export const ErrorModel = {
-  required: false,
-  serializedName: 'error',
+  serializedName: "error",
   type: {
-    name: 'Composite',
-    className: 'ErrorModel',
+    name: "Composite",
+    className: "ErrorModel",
     modelProperties: {
       status: {
-        required: false,
-        serializedName: 'status',
+        serializedName: "status",
         type: {
-          name: 'Number'
+          name: "Number"
         }
       },
       code: {
-        required: false,
-        serializedName: 'code',
+        serializedName: "code",
         type: {
-          name: 'String'
+          name: "String"
         }
       },
       details: {
-        required: false,
-        serializedName: 'details',
+        serializedName: "details",
         type: {
-          name: 'String'
+          name: "String"
         }
       },
       type: {
-        required: false,
-        serializedName: 'type',
+        serializedName: "type",
         type: {
-          name: 'String'
+          name: "String"
         }
       },
       warnings: {
-        required: false,
-        serializedName: 'warnings',
+        serializedName: "warnings",
         type: {
-          name: 'Sequence',
+          name: "Sequence",
           element: {
-              required: false,
-              serializedName: 'stringElementType',
-              type: {
-                name: 'String'
-              }
+            serializedName: "stringElementType",
+            type: {
+              name: "String"
+            }
           }
         }
       }
@@ -1211,17 +1220,15 @@ export const ErrorModel = {
 };
 
 export const CardsGetAllOptionalParams = {
-  required: false,
-  serializedName: 'GetAllOptions',
+  serializedName: "GetAllOptions",
   type: {
-    name: 'Composite',
-    className: 'CardsGetAllOptionalParams',
+    name: "Composite",
+    className: "CardsGetAllOptionalParams",
     modelProperties: {
       page: {
-        required: false,
-        serializedName: 'page',
+        serializedName: "page",
         type: {
-          name: 'Number'
+          name: "Number"
         }
       }
     }
@@ -1229,48 +1236,64 @@ export const CardsGetAllOptionalParams = {
 };
 
 export const CardsSearchOptionalParams = {
-  required: false,
-  serializedName: 'SearchOptions',
+  serializedName: "SearchOptions",
   type: {
-    name: 'Composite',
-    className: 'CardsSearchOptionalParams',
+    name: "Composite",
+    className: "CardsSearchOptionalParams",
     modelProperties: {
       unique: {
-        required: false,
-        serializedName: 'unique',
+        serializedName: "unique",
         type: {
-          name: 'Enum',
-          allowedValues: [ 'cards', 'art', 'prints' ]
+          name: "Enum",
+          allowedValues: [
+            "cards",
+            "art",
+            "prints"
+          ]
         }
       },
       order: {
-        required: false,
-        serializedName: 'order',
+        serializedName: "order",
         type: {
-          name: 'Enum',
-          allowedValues: [ 'name', 'set', 'released', 'rarity', 'color', 'usd', 'tix', 'eur', 'cmc', 'power', 'toughness', 'edhrec', 'artist' ]
+          name: "Enum",
+          allowedValues: [
+            "name",
+            "set",
+            "released",
+            "rarity",
+            "color",
+            "usd",
+            "tix",
+            "eur",
+            "cmc",
+            "power",
+            "toughness",
+            "edhrec",
+            "artist"
+          ]
         }
       },
       dir: {
-        required: false,
-        serializedName: 'dir',
+        serializedName: "dir",
         type: {
-          name: 'Enum',
-          allowedValues: [ 'auto', 'asc', 'desc' ]
+          name: "Enum",
+          allowedValues: [
+            "auto",
+            "asc",
+            "desc"
+          ]
         }
       },
       includeExtras: {
-        required: false,
-        serializedName: 'include_extras',
+        serializedName: "include_extras",
         type: {
-          name: 'Boolean'
+          name: "Boolean"
         }
       },
       page: {
-        required: false,
-        serializedName: 'page',
+        serializedName: "page",
         type: {
-          name: 'Number'
+          name: "Number"
         }
       }
     }
@@ -1278,59 +1301,51 @@ export const CardsSearchOptionalParams = {
 };
 
 export const CardsGetNamedOptionalParams = {
-  required: false,
-  serializedName: 'GetNamedOptions',
+  serializedName: "GetNamedOptions",
   type: {
-    name: 'Composite',
-    className: 'CardsGetNamedOptionalParams',
+    name: "Composite",
+    className: "CardsGetNamedOptionalParams",
     modelProperties: {
       exact: {
-        required: false,
-        serializedName: 'exact',
+        serializedName: "exact",
         type: {
-          name: 'String'
+          name: "String"
         }
       },
       fuzzy: {
-        required: false,
-        serializedName: 'fuzzy',
+        serializedName: "fuzzy",
         type: {
-          name: 'String'
+          name: "String"
         }
       },
       set: {
-        required: false,
-        serializedName: 'set',
+        serializedName: "set",
         type: {
-          name: 'String'
+          name: "String"
         }
       },
       format: {
-        required: false,
-        serializedName: 'format',
+        serializedName: "format",
         type: {
-          name: 'String'
+          name: "String"
         }
       },
       face: {
-        required: false,
-        serializedName: 'face',
+        serializedName: "face",
         type: {
-          name: 'String'
+          name: "String"
         }
       },
       version: {
-        required: false,
-        serializedName: 'version',
+        serializedName: "version",
         type: {
-          name: 'String'
+          name: "String"
         }
       },
       pretty: {
-        required: false,
-        serializedName: 'pretty',
+        serializedName: "pretty",
         type: {
-          name: 'Boolean'
+          name: "Boolean"
         }
       }
     }

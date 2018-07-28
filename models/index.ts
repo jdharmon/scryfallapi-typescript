@@ -4,7 +4,7 @@
  * regenerated.
  */
 
-import { RequestOptionsBase } from "ms-rest-js";
+import * as msRest from "ms-rest-js";
 
 
 /**
@@ -83,10 +83,9 @@ export interface CardFace {
    */
   colors?: Colors[];
   /**
-   * @member {Colors} [colorIndicator] Possible values include: 'W', 'U', 'B',
-   * 'R', 'G'
+   * @member {Colors[]} [colorIndicator]
    */
-  colorIndicator?: Colors;
+  colorIndicator?: Colors[];
   /**
    * @member {string} [power]
    */
@@ -120,61 +119,62 @@ export interface CardFace {
 export interface Legality {
   /**
    * @member {LegalStatus} [standard] Possible values include: 'legal',
-   * 'not_legal'
+   * 'not_legal', 'restricted', 'banned'
    */
   standard?: LegalStatus;
   /**
    * @member {LegalStatus} [future] Possible values include: 'legal',
-   * 'not_legal'
+   * 'not_legal', 'restricted', 'banned'
    */
   future?: LegalStatus;
   /**
    * @member {LegalStatus} [frontier] Possible values include: 'legal',
-   * 'not_legal'
+   * 'not_legal', 'restricted', 'banned'
    */
   frontier?: LegalStatus;
   /**
    * @member {LegalStatus} [modern] Possible values include: 'legal',
-   * 'not_legal'
+   * 'not_legal', 'restricted', 'banned'
    */
   modern?: LegalStatus;
   /**
    * @member {LegalStatus} [legacy] Possible values include: 'legal',
-   * 'not_legal'
+   * 'not_legal', 'restricted', 'banned'
    */
   legacy?: LegalStatus;
   /**
    * @member {LegalStatus} [pauper] Possible values include: 'legal',
-   * 'not_legal'
+   * 'not_legal', 'restricted', 'banned'
    */
   pauper?: LegalStatus;
   /**
    * @member {LegalStatus} [vintage] Possible values include: 'legal',
-   * 'not_legal'
+   * 'not_legal', 'restricted', 'banned'
    */
   vintage?: LegalStatus;
   /**
    * @member {LegalStatus} [penny] Possible values include: 'legal',
-   * 'not_legal'
+   * 'not_legal', 'restricted', 'banned'
    */
   penny?: LegalStatus;
   /**
    * @member {LegalStatus} [commander] Possible values include: 'legal',
-   * 'not_legal'
+   * 'not_legal', 'restricted', 'banned'
    */
   commander?: LegalStatus;
   /**
    * @member {LegalStatus} [onevOne] Possible values include: 'legal',
-   * 'not_legal'
+   * 'not_legal', 'restricted', 'banned'
    */
   onevOne?: LegalStatus;
   /**
-   * @member {LegalStatus} [duel] Possible values include: 'legal', 'not_legal'
+   * @member {LegalStatus} [duel] Possible values include: 'legal',
+   * 'not_legal', 'restricted', 'banned'
    */
   duel?: LegalStatus;
   /**
    * @member {LegalStatus} [brawl] Possible values include: 'legal',
-   * 'not_legal'
+   * 'not_legal', 'restricted', 'banned'
    */
   brawl?: LegalStatus;
 }
@@ -201,6 +201,10 @@ export interface Card {
    */
   mtgoId?: number;
   /**
+   * @member {number} [arenaId]
+   */
+  arenaId?: number;
+  /**
    * @member {number} [mtgoFoilId]
    */
   mtgoFoilId?: number;
@@ -226,8 +230,8 @@ export interface Card {
   name?: string;
   /**
    * @member {Layouts} [layout] Possible values include: 'normal', 'split',
-   * 'transform', 'meld', 'leveler', 'saga', 'planar', 'scheme', 'vanguard',
-   * 'token', 'double_faced_token', 'emblem', 'augment', 'host'
+   * 'flip', 'transform', 'meld', 'leveler', 'saga', 'planar', 'scheme',
+   * 'vanguard', 'token', 'double_faced_token', 'emblem', 'augment', 'host'
    */
   layout?: Layouts;
   /**
@@ -279,9 +283,9 @@ export interface Card {
    */
   colorIdentity?: Colors[];
   /**
-   * @member {RelatedCards} [allParts]
+   * @member {RelatedCards[]} [allParts]
    */
-  allParts?: RelatedCards;
+  allParts?: RelatedCards[];
   /**
    * @member {CardFace[]} [cardFaces]
    */
@@ -659,7 +663,7 @@ export interface ErrorModel {
  *
  * @extends RequestOptionsBase
  */
-export interface CardsGetAllOptionalParams extends RequestOptionsBase {
+export interface CardsGetAllOptionalParams extends msRest.RequestOptionsBase {
   /**
    * @member {number} [page]
    */
@@ -673,7 +677,7 @@ export interface CardsGetAllOptionalParams extends RequestOptionsBase {
  *
  * @extends RequestOptionsBase
  */
-export interface CardsSearchOptionalParams extends RequestOptionsBase {
+export interface CardsSearchOptionalParams extends msRest.RequestOptionsBase {
   /**
    * @member {UniqueStrategy} [unique] Possible values include: 'cards', 'art',
    * 'prints'
@@ -707,7 +711,7 @@ export interface CardsSearchOptionalParams extends RequestOptionsBase {
  *
  * @extends RequestOptionsBase
  */
-export interface CardsGetNamedOptionalParams extends RequestOptionsBase {
+export interface CardsGetNamedOptionalParams extends msRest.RequestOptionsBase {
   /**
    * @member {string} [exact]
    */
@@ -740,15 +744,16 @@ export interface CardsGetNamedOptionalParams extends RequestOptionsBase {
 
 /**
  * Defines values for Layouts.
- * Possible values include: 'normal', 'split', 'transform', 'meld', 'leveler',
- * 'saga', 'planar', 'scheme', 'vanguard', 'token', 'double_faced_token',
- * 'emblem', 'augment', 'host'
+ * Possible values include: 'normal', 'split', 'flip', 'transform', 'meld',
+ * 'leveler', 'saga', 'planar', 'scheme', 'vanguard', 'token',
+ * 'double_faced_token', 'emblem', 'augment', 'host'
  * @readonly
  * @enum {string}
  */
 export enum Layouts {
   Normal = 'normal',
   Split = 'split',
+  Flip = 'flip',
   Transform = 'transform',
   Meld = 'meld',
   Leveler = 'leveler',
@@ -779,13 +784,15 @@ export enum Colors {
 
 /**
  * Defines values for LegalStatus.
- * Possible values include: 'legal', 'not_legal'
+ * Possible values include: 'legal', 'not_legal', 'restricted', 'banned'
  * @readonly
  * @enum {string}
  */
 export enum LegalStatus {
   Legal = 'legal',
   NotLegal = 'not_legal',
+  Restricted = 'restricted',
+  Banned = 'banned',
 }
 
 /**

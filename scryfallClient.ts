@@ -8,20 +8,15 @@ import * as msRest from "ms-rest-js";
 import * as Models from "./models";
 import * as Mappers from "./models/mappers";
 import * as operations from "./operations";
+import { ScryfallClientContext } from "./scryfallClientContext";
 
-const packageName = "";
-const packageVersion = "";
-
-class ScryfallClient extends msRest.ServiceClient {
-  baseUri: string;
-
+class ScryfallClient extends ScryfallClientContext {
   // Operation groups
   sets: operations.Sets;
   cards: operations.Cards;
   rulings: operations.Rulings;
   symbology: operations.Symbology;
   catalog: operations.CatalogOperations;
-  serializer: msRest.Serializer;
 
   /**
    * @class
@@ -41,24 +36,15 @@ class ScryfallClient extends msRest.ServiceClient {
    *
    */
   constructor(baseUri?: string, options?: msRest.ServiceClientOptions) {
-
-    if (!options) options = {};
-
-    super(undefined, options);
-
-    this.baseUri = baseUri as string;
-    if (!this.baseUri) {
-      this.baseUri = 'https://api.scryfall.com';
-    }
-
-    this.addUserAgentInfo(`${packageName}/${packageVersion}`);
+    super(baseUri, options);
     this.sets = new operations.Sets(this);
     this.cards = new operations.Cards(this);
     this.rulings = new operations.Rulings(this);
     this.symbology = new operations.Symbology(this);
     this.catalog = new operations.CatalogOperations(this);
-    this.serializer = new msRest.Serializer(Mappers, false);
   }
 }
+
+// Operation Specifications
 
 export { ScryfallClient, Models as ScryfallModels, Mappers as ScryfallMappers };
