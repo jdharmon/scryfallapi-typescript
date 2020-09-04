@@ -4,8 +4,10 @@
  * regenerated.
  */
 
+import * as msRest from "@azure/ms-rest-js";
 
-export const RelatedCards = {
+
+export const RelatedCards: msRest.CompositeMapper = {
   serializedName: "related_cards",
   type: {
     name: "Composite",
@@ -33,7 +35,7 @@ export const RelatedCards = {
   }
 };
 
-export const ImageUri = {
+export const ImageUri: msRest.CompositeMapper = {
   serializedName: "image_uri",
   type: {
     name: "Composite",
@@ -79,7 +81,7 @@ export const ImageUri = {
   }
 };
 
-export const CardFace = {
+export const CardFace: msRest.CompositeMapper = {
   serializedName: "card_face",
   type: {
     name: "Composite",
@@ -114,7 +116,6 @@ export const CardFace = {
         type: {
           name: "Sequence",
           element: {
-            serializedName: "ColorsElementType",
             type: {
               name: "Enum",
               allowedValues: [
@@ -133,7 +134,6 @@ export const CardFace = {
         type: {
           name: "Sequence",
           element: {
-            serializedName: "ColorsElementType",
             type: {
               name: "Enum",
               allowedValues: [
@@ -188,7 +188,7 @@ export const CardFace = {
   }
 };
 
-export const Legality = {
+export const Legality: msRest.CompositeMapper = {
   serializedName: "legality",
   type: {
     name: "Composite",
@@ -342,7 +342,7 @@ export const Legality = {
   }
 };
 
-export const Card = {
+export const Card: msRest.CompositeMapper = {
   serializedName: "card",
   type: {
     name: "Composite",
@@ -365,7 +365,6 @@ export const Card = {
         type: {
           name: "Sequence",
           element: {
-            serializedName: "numberElementType",
             type: {
               name: "Number"
             }
@@ -502,7 +501,6 @@ export const Card = {
         type: {
           name: "Sequence",
           element: {
-            serializedName: "ColorsElementType",
             type: {
               name: "Enum",
               allowedValues: [
@@ -521,7 +519,6 @@ export const Card = {
         type: {
           name: "Sequence",
           element: {
-            serializedName: "ColorsElementType",
             type: {
               name: "Enum",
               allowedValues: [
@@ -540,7 +537,6 @@ export const Card = {
         type: {
           name: "Sequence",
           element: {
-            serializedName: "ColorsElementType",
             type: {
               name: "Enum",
               allowedValues: [
@@ -559,7 +555,6 @@ export const Card = {
         type: {
           name: "Sequence",
           element: {
-            serializedName: "RelatedCardsElementType",
             type: {
               name: "Composite",
               className: "RelatedCards"
@@ -572,7 +567,6 @@ export const Card = {
         type: {
           name: "Sequence",
           element: {
-            serializedName: "CardFaceElementType",
             type: {
               name: "Composite",
               className: "CardFace"
@@ -750,7 +744,6 @@ export const Card = {
         type: {
           name: "Dictionary",
           value: {
-            serializedName: "stringElementType",
             type: {
               name: "String"
             }
@@ -762,7 +755,6 @@ export const Card = {
         type: {
           name: "Dictionary",
           value: {
-            serializedName: "stringElementType",
             type: {
               name: "String"
             }
@@ -773,7 +765,7 @@ export const Card = {
   }
 };
 
-export const Catalog = {
+export const Catalog: msRest.CompositeMapper = {
   serializedName: "catalog",
   type: {
     name: "Composite",
@@ -790,7 +782,6 @@ export const Catalog = {
         type: {
           name: "Sequence",
           element: {
-            serializedName: "stringElementType",
             type: {
               name: "String"
             }
@@ -801,7 +792,7 @@ export const Catalog = {
   }
 };
 
-export const Set = {
+export const Set: msRest.CompositeMapper = {
   serializedName: "set",
   type: {
     name: "Composite",
@@ -911,7 +902,7 @@ export const Set = {
   }
 };
 
-export const Ruling = {
+export const Ruling: msRest.CompositeMapper = {
   serializedName: "ruling",
   type: {
     name: "Composite",
@@ -939,7 +930,7 @@ export const Ruling = {
   }
 };
 
-export const CardSymbol = {
+export const CardSymbol: msRest.CompositeMapper = {
   serializedName: "card_symbol",
   type: {
     name: "Composite",
@@ -1010,7 +1001,7 @@ export const CardSymbol = {
   }
 };
 
-export const ManaCost = {
+export const ManaCost: msRest.CompositeMapper = {
   serializedName: "mana_cost",
   type: {
     name: "Composite",
@@ -1063,7 +1054,7 @@ export const ManaCost = {
   }
 };
 
-export const CardList = {
+export const CardList: msRest.CompositeMapper = {
   serializedName: "card_list",
   type: {
     name: "Composite",
@@ -1092,7 +1083,6 @@ export const CardList = {
         type: {
           name: "Sequence",
           element: {
-            serializedName: "CardElementType",
             type: {
               name: "Composite",
               className: "Card"
@@ -1104,7 +1094,7 @@ export const CardList = {
   }
 };
 
-export const SetList = {
+export const SetList: msRest.CompositeMapper = {
   serializedName: "set_list",
   type: {
     name: "Composite",
@@ -1115,7 +1105,6 @@ export const SetList = {
         type: {
           name: "Sequence",
           element: {
-            serializedName: "SetElementType",
             type: {
               name: "Composite",
               className: "Set"
@@ -1127,7 +1116,7 @@ export const SetList = {
   }
 };
 
-export const RulingList = {
+export const RulingList: msRest.CompositeMapper = {
   serializedName: "ruling_list",
   type: {
     name: "Composite",
@@ -1138,7 +1127,6 @@ export const RulingList = {
         type: {
           name: "Sequence",
           element: {
-            serializedName: "RulingElementType",
             type: {
               name: "Composite",
               className: "Ruling"
@@ -1150,7 +1138,7 @@ export const RulingList = {
   }
 };
 
-export const CardSymbolList = {
+export const CardSymbolList: msRest.CompositeMapper = {
   serializedName: "card_symbol_list",
   type: {
     name: "Composite",
@@ -1161,7 +1149,6 @@ export const CardSymbolList = {
         type: {
           name: "Sequence",
           element: {
-            serializedName: "CardSymbolElementType",
             type: {
               name: "Composite",
               className: "CardSymbol"
@@ -1173,7 +1160,7 @@ export const CardSymbolList = {
   }
 };
 
-export const ErrorModel = {
+export const ErrorModel: msRest.CompositeMapper = {
   serializedName: "error",
   type: {
     name: "Composite",
@@ -1208,144 +1195,10 @@ export const ErrorModel = {
         type: {
           name: "Sequence",
           element: {
-            serializedName: "stringElementType",
             type: {
               name: "String"
             }
           }
-        }
-      }
-    }
-  }
-};
-
-export const CardsGetAllOptionalParams = {
-  serializedName: "GetAllOptions",
-  type: {
-    name: "Composite",
-    className: "CardsGetAllOptionalParams",
-    modelProperties: {
-      page: {
-        serializedName: "page",
-        type: {
-          name: "Number"
-        }
-      }
-    }
-  }
-};
-
-export const CardsSearchOptionalParams = {
-  serializedName: "SearchOptions",
-  type: {
-    name: "Composite",
-    className: "CardsSearchOptionalParams",
-    modelProperties: {
-      unique: {
-        serializedName: "unique",
-        type: {
-          name: "Enum",
-          allowedValues: [
-            "cards",
-            "art",
-            "prints"
-          ]
-        }
-      },
-      order: {
-        serializedName: "order",
-        type: {
-          name: "Enum",
-          allowedValues: [
-            "name",
-            "set",
-            "released",
-            "rarity",
-            "color",
-            "usd",
-            "tix",
-            "eur",
-            "cmc",
-            "power",
-            "toughness",
-            "edhrec",
-            "artist"
-          ]
-        }
-      },
-      dir: {
-        serializedName: "dir",
-        type: {
-          name: "Enum",
-          allowedValues: [
-            "auto",
-            "asc",
-            "desc"
-          ]
-        }
-      },
-      includeExtras: {
-        serializedName: "include_extras",
-        type: {
-          name: "Boolean"
-        }
-      },
-      page: {
-        serializedName: "page",
-        type: {
-          name: "Number"
-        }
-      }
-    }
-  }
-};
-
-export const CardsGetNamedOptionalParams = {
-  serializedName: "GetNamedOptions",
-  type: {
-    name: "Composite",
-    className: "CardsGetNamedOptionalParams",
-    modelProperties: {
-      exact: {
-        serializedName: "exact",
-        type: {
-          name: "String"
-        }
-      },
-      fuzzy: {
-        serializedName: "fuzzy",
-        type: {
-          name: "String"
-        }
-      },
-      set: {
-        serializedName: "set",
-        type: {
-          name: "String"
-        }
-      },
-      format: {
-        serializedName: "format",
-        type: {
-          name: "String"
-        }
-      },
-      face: {
-        serializedName: "face",
-        type: {
-          name: "String"
-        }
-      },
-      version: {
-        serializedName: "version",
-        type: {
-          name: "String"
-        }
-      },
-      pretty: {
-        serializedName: "pretty",
-        type: {
-          name: "Boolean"
         }
       }
     }

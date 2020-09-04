@@ -4,7 +4,6 @@
  * regenerated.
  */
 
-import * as msRest from "ms-rest-js";
 import * as Models from "./models";
 import * as Mappers from "./models/mappers";
 import * as operations from "./operations";
@@ -19,24 +18,11 @@ class ScryfallClient extends ScryfallClientContext {
   catalog: operations.CatalogOperations;
 
   /**
-   * @class
    * Initializes a new instance of the ScryfallClient class.
-   * @constructor
-   *
-   * @param {string} [baseUri] - The base URI of the service.
-   *
-   * @param {object} [options] - The parameter options
-   *
-   * @param {Array} [options.filters] - Filters to be added to the request pipeline
-   *
-   * @param {object} [options.requestOptions] - The request options. Detailed info can be found at
-   * {@link https://github.github.io/fetch/#Request Options doc}
-   *
-   * @param {boolean} [options.noRetryPolicy] - If set to true, turn off default retry policy
-   *
+   * @param [options] The parameter options
    */
-  constructor(baseUri?: string, options?: msRest.ServiceClientOptions) {
-    super(baseUri, options);
+  constructor(options?: Models.ScryfallClientOptions) {
+    super(options);
     this.sets = new operations.Sets(this);
     this.cards = new operations.Cards(this);
     this.rulings = new operations.Rulings(this);
@@ -47,4 +33,10 @@ class ScryfallClient extends ScryfallClientContext {
 
 // Operation Specifications
 
-export { ScryfallClient, Models as ScryfallModels, Mappers as ScryfallMappers };
+export {
+  ScryfallClient,
+  ScryfallClientContext,
+  Models as ScryfallModels,
+  Mappers as ScryfallMappers
+};
+export * from "./operations";

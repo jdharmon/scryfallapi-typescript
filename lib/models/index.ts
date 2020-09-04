@@ -4,7 +4,8 @@
  * regenerated.
  */
 
-import * as msRest from "ms-rest-js";
+import { ServiceClientOptions } from "@azure/ms-rest-js";
+import * as msRest from "@azure/ms-rest-js";
 
 
 /**
@@ -658,16 +659,14 @@ export interface ErrorModel {
 
 /**
  * @interface
- * An interface representing CardsGetAllOptionalParams.
- * Optional Parameters.
- *
- * @extends RequestOptionsBase
+ * An interface representing ScryfallClientOptions.
+ * @extends ServiceClientOptions
  */
-export interface CardsGetAllOptionalParams extends msRest.RequestOptionsBase {
+export interface ScryfallClientOptions extends ServiceClientOptions {
   /**
-   * @member {number} [page]
+   * @member {string} [baseUri]
    */
-  page?: number;
+  baseUri?: string;
 }
 
 /**
@@ -744,29 +743,12 @@ export interface CardsGetNamedOptionalParams extends msRest.RequestOptionsBase {
 
 /**
  * Defines values for Layouts.
- * Possible values include: 'normal', 'split', 'flip', 'transform', 'meld',
- * 'leveler', 'saga', 'planar', 'scheme', 'vanguard', 'token',
- * 'double_faced_token', 'emblem', 'augment', 'host'
+ * Possible values include: 'normal', 'split', 'flip', 'transform', 'meld', 'leveler', 'saga',
+ * 'planar', 'scheme', 'vanguard', 'token', 'double_faced_token', 'emblem', 'augment', 'host'
  * @readonly
  * @enum {string}
  */
-export enum Layouts {
-  Normal = 'normal',
-  Split = 'split',
-  Flip = 'flip',
-  Transform = 'transform',
-  Meld = 'meld',
-  Leveler = 'leveler',
-  Saga = 'saga',
-  Planar = 'planar',
-  Scheme = 'scheme',
-  Vanguard = 'vanguard',
-  Token = 'token',
-  DoubleFacedToken = 'double_faced_token',
-  Emblem = 'emblem',
-  Augment = 'augment',
-  Host = 'host',
-}
+export type Layouts = 'normal' | 'split' | 'flip' | 'transform' | 'meld' | 'leveler' | 'saga' | 'planar' | 'scheme' | 'vanguard' | 'token' | 'double_faced_token' | 'emblem' | 'augment' | 'host';
 
 /**
  * Defines values for Colors.
@@ -774,13 +756,7 @@ export enum Layouts {
  * @readonly
  * @enum {string}
  */
-export enum Colors {
-  W = 'W',
-  U = 'U',
-  B = 'B',
-  R = 'R',
-  G = 'G',
-}
+export type Colors = 'W' | 'U' | 'B' | 'R' | 'G';
 
 /**
  * Defines values for LegalStatus.
@@ -788,12 +764,7 @@ export enum Colors {
  * @readonly
  * @enum {string}
  */
-export enum LegalStatus {
-  Legal = 'legal',
-  NotLegal = 'not_legal',
-  Restricted = 'restricted',
-  Banned = 'banned',
-}
+export type LegalStatus = 'legal' | 'not_legal' | 'restricted' | 'banned';
 
 /**
  * Defines values for Rarity.
@@ -801,12 +772,7 @@ export enum LegalStatus {
  * @readonly
  * @enum {string}
  */
-export enum Rarity {
-  Common = 'common',
-  Uncommon = 'uncommon',
-  Rare = 'rare',
-  Mythic = 'mythic',
-}
+export type Rarity = 'common' | 'uncommon' | 'rare' | 'mythic';
 
 /**
  * Defines values for BorderColors.
@@ -814,45 +780,17 @@ export enum Rarity {
  * @readonly
  * @enum {string}
  */
-export enum BorderColors {
-  Black = 'black',
-  Borderless = 'borderless',
-  Gold = 'gold',
-  Silver = 'silver',
-  White = 'white',
-}
+export type BorderColors = 'black' | 'borderless' | 'gold' | 'silver' | 'white';
 
 /**
  * Defines values for SetTypes.
- * Possible values include: 'core', 'expansion', 'masters', 'masterpiece',
- * 'from_the_vault', 'spellbook', 'premium_deck', 'duel_deck', 'commander',
- * 'planechase', 'conspiracy', 'archenemy', 'vanguard', 'funny', 'starter',
- * 'box', 'promo', 'token', 'memorabilia', 'treasure_chest'
+ * Possible values include: 'core', 'expansion', 'masters', 'masterpiece', 'from_the_vault',
+ * 'spellbook', 'premium_deck', 'duel_deck', 'commander', 'planechase', 'conspiracy', 'archenemy',
+ * 'vanguard', 'funny', 'starter', 'box', 'promo', 'token', 'memorabilia', 'treasure_chest'
  * @readonly
  * @enum {string}
  */
-export enum SetTypes {
-  Core = 'core',
-  Expansion = 'expansion',
-  Masters = 'masters',
-  Masterpiece = 'masterpiece',
-  FromTheVault = 'from_the_vault',
-  Spellbook = 'spellbook',
-  PremiumDeck = 'premium_deck',
-  DuelDeck = 'duel_deck',
-  Commander = 'commander',
-  Planechase = 'planechase',
-  Conspiracy = 'conspiracy',
-  Archenemy = 'archenemy',
-  Vanguard = 'vanguard',
-  Funny = 'funny',
-  Starter = 'starter',
-  Box = 'box',
-  Promo = 'promo',
-  Token = 'token',
-  Memorabilia = 'memorabilia',
-  TreasureChest = 'treasure_chest',
-}
+export type SetTypes = 'core' | 'expansion' | 'masters' | 'masterpiece' | 'from_the_vault' | 'spellbook' | 'premium_deck' | 'duel_deck' | 'commander' | 'planechase' | 'conspiracy' | 'archenemy' | 'vanguard' | 'funny' | 'starter' | 'box' | 'promo' | 'token' | 'memorabilia' | 'treasure_chest';
 
 /**
  * Defines values for UniqueStrategy.
@@ -860,34 +798,16 @@ export enum SetTypes {
  * @readonly
  * @enum {string}
  */
-export enum UniqueStrategy {
-  Cards = 'cards',
-  Art = 'art',
-  Prints = 'prints',
-}
+export type UniqueStrategy = 'cards' | 'art' | 'prints';
 
 /**
  * Defines values for SortOrder.
- * Possible values include: 'name', 'set', 'released', 'rarity', 'color',
- * 'usd', 'tix', 'eur', 'cmc', 'power', 'toughness', 'edhrec', 'artist'
+ * Possible values include: 'name', 'set', 'released', 'rarity', 'color', 'usd', 'tix', 'eur',
+ * 'cmc', 'power', 'toughness', 'edhrec', 'artist'
  * @readonly
  * @enum {string}
  */
-export enum SortOrder {
-  Name = 'name',
-  Set = 'set',
-  Released = 'released',
-  Rarity = 'rarity',
-  Color = 'color',
-  Usd = 'usd',
-  Tix = 'tix',
-  Eur = 'eur',
-  Cmc = 'cmc',
-  Power = 'power',
-  Toughness = 'toughness',
-  Edhrec = 'edhrec',
-  Artist = 'artist',
-}
+export type SortOrder = 'name' | 'set' | 'released' | 'rarity' | 'color' | 'usd' | 'tix' | 'eur' | 'cmc' | 'power' | 'toughness' | 'edhrec' | 'artist';
 
 /**
  * Defines values for SortDirection.
@@ -895,8 +815,555 @@ export enum SortOrder {
  * @readonly
  * @enum {string}
  */
-export enum SortDirection {
-  Auto = 'auto',
-  Asc = 'asc',
-  Desc = 'desc',
-}
+export type SortDirection = 'auto' | 'asc' | 'desc';
+
+/**
+ * Contains response data for the getAll operation.
+ */
+export type SetsGetAllResponse = SetList & {
+  /**
+   * The underlying HTTP response.
+   */
+  _response: msRest.HttpResponse & {
+      /**
+       * The response body as text (string format)
+       */
+      bodyAsText: string;
+      /**
+       * The response body as parsed JSON or XML
+       */
+      parsedBody: SetList;
+    };
+};
+
+/**
+ * Contains response data for the getByCode operation.
+ */
+export type SetsGetByCodeResponse = Set & {
+  /**
+   * The underlying HTTP response.
+   */
+  _response: msRest.HttpResponse & {
+      /**
+       * The response body as text (string format)
+       */
+      bodyAsText: string;
+      /**
+       * The response body as parsed JSON or XML
+       */
+      parsedBody: Set;
+    };
+};
+
+/**
+ * Contains response data for the search operation.
+ */
+export type CardsSearchResponse = CardList & {
+  /**
+   * The underlying HTTP response.
+   */
+  _response: msRest.HttpResponse & {
+      /**
+       * The response body as text (string format)
+       */
+      bodyAsText: string;
+      /**
+       * The response body as parsed JSON or XML
+       */
+      parsedBody: CardList;
+    };
+};
+
+/**
+ * Contains response data for the getNamed operation.
+ */
+export type CardsGetNamedResponse = Card & {
+  /**
+   * The underlying HTTP response.
+   */
+  _response: msRest.HttpResponse & {
+      /**
+       * The response body as text (string format)
+       */
+      bodyAsText: string;
+      /**
+       * The response body as parsed JSON or XML
+       */
+      parsedBody: Card;
+    };
+};
+
+/**
+ * Contains response data for the autocomplete operation.
+ */
+export type CardsAutocompleteResponse = Catalog & {
+  /**
+   * The underlying HTTP response.
+   */
+  _response: msRest.HttpResponse & {
+      /**
+       * The response body as text (string format)
+       */
+      bodyAsText: string;
+      /**
+       * The response body as parsed JSON or XML
+       */
+      parsedBody: Catalog;
+    };
+};
+
+/**
+ * Contains response data for the getRandom operation.
+ */
+export type CardsGetRandomResponse = Card & {
+  /**
+   * The underlying HTTP response.
+   */
+  _response: msRest.HttpResponse & {
+      /**
+       * The response body as text (string format)
+       */
+      bodyAsText: string;
+      /**
+       * The response body as parsed JSON or XML
+       */
+      parsedBody: Card;
+    };
+};
+
+/**
+ * Contains response data for the getByMultiverseId operation.
+ */
+export type CardsGetByMultiverseIdResponse = Card & {
+  /**
+   * The underlying HTTP response.
+   */
+  _response: msRest.HttpResponse & {
+      /**
+       * The response body as text (string format)
+       */
+      bodyAsText: string;
+      /**
+       * The response body as parsed JSON or XML
+       */
+      parsedBody: Card;
+    };
+};
+
+/**
+ * Contains response data for the getByMtgoId operation.
+ */
+export type CardsGetByMtgoIdResponse = Card & {
+  /**
+   * The underlying HTTP response.
+   */
+  _response: msRest.HttpResponse & {
+      /**
+       * The response body as text (string format)
+       */
+      bodyAsText: string;
+      /**
+       * The response body as parsed JSON or XML
+       */
+      parsedBody: Card;
+    };
+};
+
+/**
+ * Contains response data for the getByArenaId operation.
+ */
+export type CardsGetByArenaIdResponse = Card & {
+  /**
+   * The underlying HTTP response.
+   */
+  _response: msRest.HttpResponse & {
+      /**
+       * The response body as text (string format)
+       */
+      bodyAsText: string;
+      /**
+       * The response body as parsed JSON or XML
+       */
+      parsedBody: Card;
+    };
+};
+
+/**
+ * Contains response data for the getByCodeByNumber operation.
+ */
+export type CardsGetByCodeByNumberResponse = Card & {
+  /**
+   * The underlying HTTP response.
+   */
+  _response: msRest.HttpResponse & {
+      /**
+       * The response body as text (string format)
+       */
+      bodyAsText: string;
+      /**
+       * The response body as parsed JSON or XML
+       */
+      parsedBody: Card;
+    };
+};
+
+/**
+ * Contains response data for the getById operation.
+ */
+export type CardsGetByIdResponse = Card & {
+  /**
+   * The underlying HTTP response.
+   */
+  _response: msRest.HttpResponse & {
+      /**
+       * The response body as text (string format)
+       */
+      bodyAsText: string;
+      /**
+       * The response body as parsed JSON or XML
+       */
+      parsedBody: Card;
+    };
+};
+
+/**
+ * Contains response data for the getByMultiverseId operation.
+ */
+export type RulingsGetByMultiverseIdResponse = RulingList & {
+  /**
+   * The underlying HTTP response.
+   */
+  _response: msRest.HttpResponse & {
+      /**
+       * The response body as text (string format)
+       */
+      bodyAsText: string;
+      /**
+       * The response body as parsed JSON or XML
+       */
+      parsedBody: RulingList;
+    };
+};
+
+/**
+ * Contains response data for the getByMtgoId operation.
+ */
+export type RulingsGetByMtgoIdResponse = RulingList & {
+  /**
+   * The underlying HTTP response.
+   */
+  _response: msRest.HttpResponse & {
+      /**
+       * The response body as text (string format)
+       */
+      bodyAsText: string;
+      /**
+       * The response body as parsed JSON or XML
+       */
+      parsedBody: RulingList;
+    };
+};
+
+/**
+ * Contains response data for the getByCodeByNumberId operation.
+ */
+export type RulingsGetByCodeByNumberIdResponse = RulingList & {
+  /**
+   * The underlying HTTP response.
+   */
+  _response: msRest.HttpResponse & {
+      /**
+       * The response body as text (string format)
+       */
+      bodyAsText: string;
+      /**
+       * The response body as parsed JSON or XML
+       */
+      parsedBody: RulingList;
+    };
+};
+
+/**
+ * Contains response data for the getById operation.
+ */
+export type RulingsGetByIdResponse = RulingList & {
+  /**
+   * The underlying HTTP response.
+   */
+  _response: msRest.HttpResponse & {
+      /**
+       * The response body as text (string format)
+       */
+      bodyAsText: string;
+      /**
+       * The response body as parsed JSON or XML
+       */
+      parsedBody: RulingList;
+    };
+};
+
+/**
+ * Contains response data for the getAll operation.
+ */
+export type SymbologyGetAllResponse = CardSymbolList & {
+  /**
+   * The underlying HTTP response.
+   */
+  _response: msRest.HttpResponse & {
+      /**
+       * The response body as text (string format)
+       */
+      bodyAsText: string;
+      /**
+       * The response body as parsed JSON or XML
+       */
+      parsedBody: CardSymbolList;
+    };
+};
+
+/**
+ * Contains response data for the parseMana operation.
+ */
+export type SymbologyParseManaResponse = ManaCost & {
+  /**
+   * The underlying HTTP response.
+   */
+  _response: msRest.HttpResponse & {
+      /**
+       * The response body as text (string format)
+       */
+      bodyAsText: string;
+      /**
+       * The response body as parsed JSON or XML
+       */
+      parsedBody: ManaCost;
+    };
+};
+
+/**
+ * Contains response data for the getCardNames operation.
+ */
+export type CatalogGetCardNamesResponse = Catalog & {
+  /**
+   * The underlying HTTP response.
+   */
+  _response: msRest.HttpResponse & {
+      /**
+       * The response body as text (string format)
+       */
+      bodyAsText: string;
+      /**
+       * The response body as parsed JSON or XML
+       */
+      parsedBody: Catalog;
+    };
+};
+
+/**
+ * Contains response data for the getWordBank operation.
+ */
+export type CatalogGetWordBankResponse = Catalog & {
+  /**
+   * The underlying HTTP response.
+   */
+  _response: msRest.HttpResponse & {
+      /**
+       * The response body as text (string format)
+       */
+      bodyAsText: string;
+      /**
+       * The response body as parsed JSON or XML
+       */
+      parsedBody: Catalog;
+    };
+};
+
+/**
+ * Contains response data for the getCreatureTypes operation.
+ */
+export type CatalogGetCreatureTypesResponse = Catalog & {
+  /**
+   * The underlying HTTP response.
+   */
+  _response: msRest.HttpResponse & {
+      /**
+       * The response body as text (string format)
+       */
+      bodyAsText: string;
+      /**
+       * The response body as parsed JSON or XML
+       */
+      parsedBody: Catalog;
+    };
+};
+
+/**
+ * Contains response data for the getPlaneswalkerTypes operation.
+ */
+export type CatalogGetPlaneswalkerTypesResponse = Catalog & {
+  /**
+   * The underlying HTTP response.
+   */
+  _response: msRest.HttpResponse & {
+      /**
+       * The response body as text (string format)
+       */
+      bodyAsText: string;
+      /**
+       * The response body as parsed JSON or XML
+       */
+      parsedBody: Catalog;
+    };
+};
+
+/**
+ * Contains response data for the getLandTypes operation.
+ */
+export type CatalogGetLandTypesResponse = Catalog & {
+  /**
+   * The underlying HTTP response.
+   */
+  _response: msRest.HttpResponse & {
+      /**
+       * The response body as text (string format)
+       */
+      bodyAsText: string;
+      /**
+       * The response body as parsed JSON or XML
+       */
+      parsedBody: Catalog;
+    };
+};
+
+/**
+ * Contains response data for the getArtifactTypes operation.
+ */
+export type CatalogGetArtifactTypesResponse = Catalog & {
+  /**
+   * The underlying HTTP response.
+   */
+  _response: msRest.HttpResponse & {
+      /**
+       * The response body as text (string format)
+       */
+      bodyAsText: string;
+      /**
+       * The response body as parsed JSON or XML
+       */
+      parsedBody: Catalog;
+    };
+};
+
+/**
+ * Contains response data for the getEnchantmentTypes operation.
+ */
+export type CatalogGetEnchantmentTypesResponse = Catalog & {
+  /**
+   * The underlying HTTP response.
+   */
+  _response: msRest.HttpResponse & {
+      /**
+       * The response body as text (string format)
+       */
+      bodyAsText: string;
+      /**
+       * The response body as parsed JSON or XML
+       */
+      parsedBody: Catalog;
+    };
+};
+
+/**
+ * Contains response data for the getSpellTypes operation.
+ */
+export type CatalogGetSpellTypesResponse = Catalog & {
+  /**
+   * The underlying HTTP response.
+   */
+  _response: msRest.HttpResponse & {
+      /**
+       * The response body as text (string format)
+       */
+      bodyAsText: string;
+      /**
+       * The response body as parsed JSON or XML
+       */
+      parsedBody: Catalog;
+    };
+};
+
+/**
+ * Contains response data for the getPowers operation.
+ */
+export type CatalogGetPowersResponse = Catalog & {
+  /**
+   * The underlying HTTP response.
+   */
+  _response: msRest.HttpResponse & {
+      /**
+       * The response body as text (string format)
+       */
+      bodyAsText: string;
+      /**
+       * The response body as parsed JSON or XML
+       */
+      parsedBody: Catalog;
+    };
+};
+
+/**
+ * Contains response data for the getToughnesses operation.
+ */
+export type CatalogGetToughnessesResponse = Catalog & {
+  /**
+   * The underlying HTTP response.
+   */
+  _response: msRest.HttpResponse & {
+      /**
+       * The response body as text (string format)
+       */
+      bodyAsText: string;
+      /**
+       * The response body as parsed JSON or XML
+       */
+      parsedBody: Catalog;
+    };
+};
+
+/**
+ * Contains response data for the getLoyalties operation.
+ */
+export type CatalogGetLoyaltiesResponse = Catalog & {
+  /**
+   * The underlying HTTP response.
+   */
+  _response: msRest.HttpResponse & {
+      /**
+       * The response body as text (string format)
+       */
+      bodyAsText: string;
+      /**
+       * The response body as parsed JSON or XML
+       */
+      parsedBody: Catalog;
+    };
+};
+
+/**
+ * Contains response data for the getWatermarks operation.
+ */
+export type CatalogGetWatermarksResponse = Catalog & {
+  /**
+   * The underlying HTTP response.
+   */
+  _response: msRest.HttpResponse & {
+      /**
+       * The response body as text (string format)
+       */
+      bodyAsText: string;
+      /**
+       * The response body as parsed JSON or XML
+       */
+      parsedBody: Catalog;
+    };
+};
